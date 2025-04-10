@@ -152,6 +152,15 @@
         <div class="color-swatch" style="background: #1e90ff;"></div>
         <div class="color-swatch" style="background: #4CAF50;"></div>
         <div class="color-swatch" style="background: #FFD700;"></div>
+
+        <div style="margin-bottom: 1rem;">
+          <label for="materialSelect"><strong>Target:</strong></label>
+          <select id="materialSelect" style="margin-left: 0.5rem; padding: 0.3rem;">
+            <option value="Purpleshoe">Shoe</option>
+            <option value="LacesFlatMaterial">Laces</option>
+          </select>
+        </div>
+        
       </div>
     </div>
   </div>
@@ -168,33 +177,40 @@
   <script type="module">
     const modelViewer = document.getElementById('warriorModel');
     const swatches = document.querySelectorAll('.color-swatch');
-  
+    const materialSelect = document.getElementById('materialSelect');
+
+    let activeMaterial = 'Purpleshoe';
+
+    materialSelect.addEventListener('change', () => {
+      activeMaterial = materialSelect.value;
+    });
+
     function setMaterialColor(materialName, colorString) {
       const material = modelViewer.model?.materials.find(mat => mat.name === materialName);
       if (!material) {
         console.warn(`Material "${materialName}" not found.`);
         return;
       }
-  
+
       const rgba = parseRGBColor(colorString);
       if (rgba) {
         material.pbrMetallicRoughness.setBaseColorFactor(rgba);
       }
     }
-  
+
     function parseRGBColor(rgbString) {
       const match = rgbString.match(/rgb\s*\(\s*(\d+),\s*(\d+),\s*(\d+)\s*\)/i);
       if (!match) return null;
-  
+
       const [r, g, b] = match.slice(1, 4).map(n => parseInt(n, 10) / 255);
       return [r, g, b, 1];
     }
-  
+
     modelViewer.addEventListener('load', () => {
       swatches.forEach(swatch => {
         swatch.addEventListener('click', () => {
           const color = getComputedStyle(swatch).backgroundColor;
-          setMaterialColor('Purpleshoe', color);
+          setMaterialColor(activeMaterial, color);
         });
       });
     });
