@@ -2,37 +2,167 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Sneaker Shop</title>
+  <title>Warrior Kicks</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/three@0.155.0/build/three.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/three@0.155.0/examples/js/loaders/GLTFLoader.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700&display=swap" rel="stylesheet">
 
   <style>
-    body {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      background: white;
+    :root {
+      --primary-color: #111;
+      --accent-color: #FF3C3C;
+      --bg-color: #f4f4f4;
+      --text-dark: #222;
+      --text-light: #555;
+      --font-main: 'Outfit', sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      padding: 0;
       margin: 0;
     }
+
+    body {
+      font-family: var(--font-main);
+      background-color: var(--bg-color);
+      color: var(--text-dark);
+    }
+
+    header {
+      background: var(--primary-color);
+      color: white;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h1 {
+      font-size: 2rem;
+    }
+
+    nav a {
+      color: white;
+      margin-left: 2rem;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .main-container {
+      display: flex;
+      flex-direction: row;
+      padding: 2rem;
+      gap: 2rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
     model-viewer {
-      width: 600px;
+      width: 100%;
+      max-width: 700px;
       height: 500px;
+      background-color: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+    }
+
+    .sidebar {
+      background-color: white;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      max-width: 350px;
+      width: 100%;
+    }
+
+    .sidebar h2 {
+      font-size: 1.4rem;
+      margin-bottom: 1rem;
+    }
+
+    .color-options {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .color-swatch {
+      width: 40px;
+      height: 40px;
+      border-radius: 8px;
+      cursor: pointer;
+      border: 2px solid transparent;
+    }
+
+    .color-swatch:hover {
+      border-color: var(--accent-color);
+    }
+
+    footer {
+      background: #111;
+      color: #bbb;
+      padding: 2rem;
+      text-align: center;
+      margin-top: 4rem;
+    }
+
+    footer a {
+      color: white;
+      margin: 0 1rem;
+      text-decoration: none;
+    }
+
+    @media (max-width: 768px) {
+      .main-container {
+        flex-direction: column;
+        align-items: center;
+      }
     }
   </style>
 </head>
 <body>
+  <header>
+    <h1>Warrior Kicks</h1>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Customize</a>
+      <a href="#">Shop</a>
+    </nav>
+  </header>
 
-  <model-viewer 
-    src="Images/warrior_sneaker.glb" 
-    alt="A 3D model"
-    auto-rotate 
-    camera-controls 
-    ar
-    background-color="#ffffff">
-  </model-viewer>
-  
+  <div class="main-container">
+    <model-viewer 
+      id="warriorModel"
+      src="Images/warrior_sneaker.glb" 
+      alt="3D Warrior Sneaker"
+      auto-rotate 
+      camera-controls 
+      ar 
+      shadow-intensity="1"
+      background-color="#fff">
+    </model-viewer>
 
+    <div class="sidebar">
+      <h2>Customize Your Warrior</h2>
+      <div class="color-options">
+        <div class="color-swatch" style="background: #000;"></div>
+        <div class="color-swatch" style="background: #fff; border: 1px solid #ccc;"></div>
+        <div class="color-swatch" style="background: #ff3c3c;"></div>
+        <div class="color-swatch" style="background: #1e90ff;"></div>
+        <div class="color-swatch" style="background: #4CAF50;"></div>
+        <div class="color-swatch" style="background: #FFD700;"></div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2025 Warrior Kicks. All rights reserved.</p>
+    <p>
+      <a href="#">Instagram</a> |
+      <a href="#">TikTok</a> |
+      <a href="#">YouTube</a>
+    </p>
+  </footer>
 </body>
 </html>
