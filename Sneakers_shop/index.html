@@ -164,5 +164,41 @@
       <a href="#">YouTube</a>
     </p>
   </footer>
+
+  <script type="module">
+    const modelViewer = document.getElementById('warriorModel');
+    const swatches = document.querySelectorAll('.color-swatch');
+  
+    function setMaterialColor(materialName, colorString) {
+      const material = modelViewer.model?.materials.find(mat => mat.name === materialName);
+      if (!material) {
+        console.warn(`Material "${materialName}" not found.`);
+        return;
+      }
+  
+      const rgba = parseRGBColor(colorString);
+      if (rgba) {
+        material.pbrMetallicRoughness.setBaseColorFactor(rgba);
+      }
+    }
+  
+    function parseRGBColor(rgbString) {
+      const match = rgbString.match(/rgb\s*\(\s*(\d+),\s*(\d+),\s*(\d+)\s*\)/i);
+      if (!match) return null;
+  
+      const [r, g, b] = match.slice(1, 4).map(n => parseInt(n, 10) / 255);
+      return [r, g, b, 1];
+    }
+  
+    modelViewer.addEventListener('load', () => {
+      swatches.forEach(swatch => {
+        swatch.addEventListener('click', () => {
+          const color = getComputedStyle(swatch).backgroundColor;
+          setMaterialColor('Purpleshoe', color);
+        });
+      });
+    });
+  </script>
+  
 </body>
 </html>
