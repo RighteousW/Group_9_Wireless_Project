@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Warrior Kicks</title>
+  <link rel="stylesheet" href="styles.css"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700&display=swap" rel="stylesheet">
@@ -119,6 +120,179 @@
         align-items: center;
       }
     }
+
+    .hero {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 4rem 2rem;
+      flex-wrap: wrap;
+    }
+
+    .hero-text {
+      max-width: 500px;
+    }
+
+    .headline {
+      font-size: 2.8rem;
+      font-weight: 800;
+      margin-bottom: 1rem;
+    }
+
+    .subheadline {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+
+    .description {
+      font-size: 1rem;
+      margin-bottom: 2rem;
+      color: black;
+    }
+
+    .action-group {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .action-button {
+      background-color: black;
+      color: #fff;
+      border: none;
+      padding: 0.75rem 1.5rem;
+      font-size: 1rem;
+      font-weight: bold;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .social-proof {
+      font-size: 0.9rem;
+      color: black;
+    }
+
+    .hero-image {
+      flex: 1 1 40%;
+      text-align: right;
+      position: relative;
+      top: -60px;
+    }
+
+    .hero-image img {
+      max-width: 450px;
+      width: 100%;
+    }
+
+    .warrior-sneaker-section {
+      padding: 4rem 2rem;
+      background-color: #fff;
+    }
+
+    .sneaker-content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 2rem;
+    }
+
+    .sneaker-text {
+      flex: 1 1 50%;
+      color: black;
+    }
+
+    .sneaker-text h2 {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+
+    .sneaker-text p {
+      font-size: 1rem;
+      margin-bottom: 1rem;
+      line-height: 1.6;
+    }
+
+    .sneaker-text ul {
+      list-style: disc;
+      padding-left: 1.5rem;
+      color: black;
+    }
+
+    .sneaker-image {
+      flex: 1 1 40%;
+      text-align: right;
+      position: relative;
+      top: -50px;
+    }
+
+    .sneaker-image img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    /* New section styles */
+    .sneaker-features-section {
+      padding: 4rem 2rem;
+      background-color: var(--bg-color);
+      text-align: center;
+    }
+
+    .sneaker-features-headline {
+      font-size: 2.5rem;
+      font-weight: 700;
+      line-height: 1.2;
+      margin-bottom: 20px;
+      color: var(--text-dark);
+    }
+
+    .sneaker-features-subhead {
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin: 0 auto 40px;
+      color: var(--text-light);
+    }
+
+    .sneaker-features-list {
+      list-style: none;
+      padding: 0;
+      max-width: 500px;
+      margin: 0 auto;
+      text-align: left;
+    }
+
+    .sneaker-feature-item {
+      padding: 12px 0;
+      font-size: 1.1rem;
+      position: relative;
+      padding-left: 40px;
+    }
+
+    .sneaker-feature-item:before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 14px;
+      width: 22px;
+      height: 22px;
+      border: 2px solid #ddd;
+      border-radius: 4px;
+      background-color: white;
+    }
+
+    .sneaker-feature-item[data-checked="true"]:before {
+      background-color: var(--primary-color);
+      border-color: var(--primary-color);
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'%3E%3C/polyline%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    .accent {
+      color: var(--accent-color);
+    }
   </style>
 </head>
 <body>
@@ -130,6 +304,80 @@
       <a href="#">Shop</a>
     </nav>
   </header>
+
+  <div class="hero-text">
+    <h1 class="headline">Warrior Sneaker</h1>
+    <h2 class="subheadline">Conquer the streets in legendary style</h2>
+    <p class="description">Designed for performance and built to last, Warrior Sneaker is the ultimate fusion of comfort, power, and bold aesthetics.</p>
+    <div class="action-group">
+      <button class="action-button">Shop Now</button>
+      <p class="social-proof">5,000 sneakerheads already made the switch!</p>
+    </div>
+  </div>
+  <div class="hero-image">
+    <img src="Images/il_794xN.5711605874_lw5k.avif" alt="Warrior Sneaker Design" />
+  </div>
+
+  <section class="warrior-sneaker-section">
+    <div class="sneaker-content">
+      <div class="sneaker-text">
+        <h2>Unleash Your Inner Warrior with Every Step</h2>
+        <p>The Warrior Sneaker is engineered for those who walk with purpose. Designed with advanced cushioning, premium materials, and bold style, this sneaker transforms your everyday stride into a statement of strength and resilience.</p>
+        <ul>
+          <li>High-performance sole for superior grip and comfort</li>
+          <li>Breathable mesh upper to keep your feet cool</li>
+          <li>Modern aesthetic that turns heads</li>
+          <li>Built for both city streets and off-road paths</li>
+        </ul>
+      </div>
+      <div class="sneaker-image">
+        <img src="Images/il_794xN.6638895871_k2fl.avif" alt="Warrior Sneaker">
+      </div>
+    </div>
+  </section>
+
+  <!-- New section added here -->
+  <section class="sneaker-features-section">
+    <h1 class="sneaker-features-headline">Warrior Sneaker <span class="accent">Pro</span> - dominate the streets in ultimate comfort</h1>
+    
+    <p class="sneaker-features-subhead">Engineered for champions who refuse to settle. The Warrior Sneaker Pro combines cutting-edge technology with bold street style to power through your toughest challenges.</p>
+    
+    <ul class="sneaker-features-list">
+      <li class="sneaker-feature-item" data-checked="false">Showcase your style with premium materials</li>
+      <li class="sneaker-feature-item" data-checked="true">Available now in limited edition colors</li>
+      <li class="sneaker-feature-item" data-checked="false">Global shipping with exclusive packaging</li>
+    </ul>
+  </section>
+
+  <!-- Testimonials Section -->
+<section class="testimonials-section" style="padding: 4rem 2rem; background-color: #f8f8f8; text-align: center;">
+  <div style="max-width: 800px; margin: 0 auto;">
+    <h2 style="font-size: 2rem; margin-bottom: 2rem; color: var(--primary-color);">What Our Warriors Say</h2>
+    
+    <div style="display: flex; flex-wrap: wrap; gap: 2rem; justify-content: center;">
+      <!-- Testimonial 1 -->
+      <div style="flex: 1 1 300px; background: white; padding: 2rem; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+        <p style="font-style: italic; margin-bottom: 1.5rem; color: var(--text-light);">"The Warrior Sneaker changed my game completely. The comfort and support are unmatched, whether I'm on the court or the streets. All-day wear with zero fatigue - just pure performance."</p>
+        <div style="font-weight: 600;">Alex Johnson</div>
+        <div style="color: var(--text-light); font-size: 0.9rem;">Professional Basketball Player</div>
+      </div>
+      
+      <!-- Testimonial 2 -->
+      <div style="flex: 1 1 300px; background: white; padding: 2rem; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+        <p style="font-style: italic; margin-bottom: 1.5rem; color: var(--text-light);">"From the first step, I knew these were special. The Warrior Sneaker combines cutting-edge tech with streetwear aesthetics perfectly. My collection has never looked better."</p>
+        <div style="font-weight: 600;">Jamie Chen</div>
+        <div style="color: var(--text-light); font-size: 0.9rem;">Sneaker Collector</div>
+      </div>
+      
+      <!-- Testimonial 3 -->
+      <div style="flex: 1 1 300px; background: white; padding: 2rem; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+        <p style="font-style: italic; margin-bottom: 1.5rem; color: var(--text-light);">"As a runner, I demand performance. The Warrior Sneaker delivers with its responsive cushioning and breathable design. Mile after mile, they keep getting better."</p>
+        <div style="font-weight: 600;">Taylor Smith</div>
+        <div style="color: var(--text-light); font-size: 0.9rem;">Marathon Runner</div>
+      </div>
+    </div>
+  </div>
+</section>
 
   <div class="main-container">
     <model-viewer 
@@ -160,7 +408,6 @@
             <option value="LacesFlatMaterial">Laces</option>
           </select>
         </div>
-        
       </div>
     </div>
   </div>
@@ -215,6 +462,5 @@
       });
     });
   </script>
-  
 </body>
 </html>
