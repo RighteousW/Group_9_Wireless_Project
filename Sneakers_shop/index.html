@@ -1,126 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>Warrior Kicks</title>
+  <link rel="stylesheet" href="styles.css" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700&display=swap" rel="stylesheet">
 
-  <style>
-    :root {
-      --primary-color: #111;
-      --accent-color: #FF3C3C;
-      --bg-color: #f4f4f4;
-      --text-dark: #222;
-      --text-light: #555;
-      --font-main: 'Outfit', sans-serif;
-    }
-
-    * {
-      box-sizing: border-box;
-      padding: 0;
-      margin: 0;
-    }
-
-    body {
-      font-family: var(--font-main);
-      background-color: var(--bg-color);
-      color: var(--text-dark);
-    }
-
-    header {
-      background: var(--primary-color);
-      color: white;
-      padding: 1rem 2rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    header h1 {
-      font-size: 2rem;
-    }
-
-    nav a {
-      color: white;
-      margin-left: 2rem;
-      text-decoration: none;
-      font-weight: 500;
-    }
-
-    .main-container {
-      display: flex;
-      flex-direction: row;
-      padding: 2rem;
-      gap: 2rem;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-
-    model-viewer {
-      width: 100%;
-      max-width: 700px;
-      height: 500px;
-      background-color: #fff;
-      border-radius: 12px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.2);
-    }
-
-    .sidebar {
-      background-color: white;
-      padding: 2rem;
-      border-radius: 12px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-      max-width: 350px;
-      width: 100%;
-    }
-
-    .sidebar h2 {
-      font-size: 1.4rem;
-      margin-bottom: 1rem;
-    }
-
-    .color-options {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-    }
-
-    .color-swatch {
-      width: 40px;
-      height: 40px;
-      border-radius: 8px;
-      cursor: pointer;
-      border: 2px solid transparent;
-    }
-
-    .color-swatch:hover {
-      border-color: var(--accent-color);
-    }
-
-    footer {
-      background: #111;
-      color: #bbb;
-      padding: 2rem;
-      text-align: center;
-      margin-top: 4rem;
-    }
-
-    footer a {
-      color: white;
-      margin: 0 1rem;
-      text-decoration: none;
-    }
-
-    @media (max-width: 768px) {
-      .main-container {
-        flex-direction: column;
-        align-items: center;
-      }
-    }
-  </style>
 </head>
+
 <body>
   <header>
     <h1>Warrior Kicks</h1>
@@ -131,16 +21,97 @@
     </nav>
   </header>
 
+  <div class="hero-text">
+    <h1 class="headline">Warrior Sneaker</h1>
+    <h2 class="subheadline">Conquer the streets in legendary style</h2>
+    <p class="description">Designed for performance and built to last, Warrior Sneaker is the ultimate fusion of
+      comfort, power, and bold aesthetics.</p>
+    <div class="action-group">
+      <button class="action-button">Shop Now</button>
+      <p class="social-proof">5,000 sneakerheads already made the switch!</p>
+    </div>
+  </div>
+  <div class="hero-image">
+    <img src="Images/il_794xN.5711605874_lw5k.avif" alt="Warrior Sneaker Design" />
+  </div>
+
+  <section class="warrior-sneaker-section">
+    <div class="sneaker-content">
+      <div class="sneaker-text">
+        <h2>Unleash Your Inner Warrior with Every Step</h2>
+        <p>The Warrior Sneaker is engineered for those who walk with purpose. Designed with advanced cushioning, premium
+          materials, and bold style, this sneaker transforms your everyday stride into a statement of strength and
+          resilience.</p>
+        <ul>
+          <li>High-performance sole for superior grip and comfort</li>
+          <li>Breathable mesh upper to keep your feet cool</li>
+          <li>Modern aesthetic that turns heads</li>
+          <li>Built for both city streets and off-road paths</li>
+        </ul>
+      </div>
+      <div class="sneaker-image">
+        <img src="Images/il_794xN.6638895871_k2fl.avif" alt="Warrior Sneaker">
+      </div>
+    </div>
+  </section>
+
+  <!-- New section added here -->
+  <section class="sneaker-features-section">
+    <h1 class="sneaker-features-headline">Warrior Sneaker <span class="accent">Pro</span> - dominate the streets in
+      ultimate comfort</h1>
+
+    <p class="sneaker-features-subhead">Engineered for champions who refuse to settle. The Warrior Sneaker Pro combines
+      cutting-edge technology with bold street style to power through your toughest challenges.</p>
+
+    <ul class="sneaker-features-list">
+      <li class="sneaker-feature-item" data-checked="false">Showcase your style with premium materials</li>
+      <li class="sneaker-feature-item" data-checked="true">Available now in limited edition colors</li>
+      <li class="sneaker-feature-item" data-checked="false">Global shipping with exclusive packaging</li>
+    </ul>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="testimonials-section" style="padding: 4rem 2rem; background-color: #f8f8f8; text-align: center;">
+    <div style="max-width: 800px; margin: 0 auto;">
+      <h2 style="font-size: 2rem; margin-bottom: 2rem; color: var(--primary-color);">What Our Warriors Say</h2>
+
+      <div style="display: flex; flex-wrap: wrap; gap: 2rem; justify-content: center;">
+        <!-- Testimonial 1 -->
+        <div
+          style="flex: 1 1 300px; background: white; padding: 2rem; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+          <p style="font-style: italic; margin-bottom: 1.5rem; color: var(--text-light);">"The Warrior Sneaker changed
+            my game completely. The comfort and support are unmatched, whether I'm on the court or the streets. All-day
+            wear with zero fatigue - just pure performance."</p>
+          <div style="font-weight: 600;">Alex Johnson</div>
+          <div style="color: var(--text-light); font-size: 0.9rem;">Professional Basketball Player</div>
+        </div>
+
+        <!-- Testimonial 2 -->
+        <div
+          style="flex: 1 1 300px; background: white; padding: 2rem; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+          <p style="font-style: italic; margin-bottom: 1.5rem; color: var(--text-light);">"From the first step, I knew
+            these were special. The Warrior Sneaker combines cutting-edge tech with streetwear aesthetics perfectly. My
+            collection has never looked better."</p>
+          <div style="font-weight: 600;">Jamie Chen</div>
+          <div style="color: var(--text-light); font-size: 0.9rem;">Sneaker Collector</div>
+        </div>
+
+        <!-- Testimonial 3 -->
+        <div
+          style="flex: 1 1 300px; background: white; padding: 2rem; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+          <p style="font-style: italic; margin-bottom: 1.5rem; color: var(--text-light);">"As a runner, I demand
+            performance. The Warrior Sneaker delivers with its responsive cushioning and breathable design. Mile after
+            mile, they keep getting better."</p>
+          <div style="font-weight: 600;">Taylor Smith</div>
+          <div style="color: var(--text-light); font-size: 0.9rem;">Marathon Runner</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <div class="main-container">
-    <model-viewer 
-      id="warriorModel"
-      src="Images/warrior_sneaker_with_sole.glb" 
-      alt="3D Warrior Sneaker"
-      auto-rotate 
-      camera-controls 
-      ar 
-      shadow-intensity="1"
-      background-color="#fff">
+    <model-viewer id="warriorModel" src="Images/warrior_sneaker_with_sole.glb" alt="3D Warrior Sneaker" auto-rotate
+      camera-controls ar shadow-intensity="1" background-color="#fff">
     </model-viewer>
 
     <div class="sidebar">
@@ -161,7 +132,6 @@
             <option value="Sole">Sole</option>
           </select>
         </div>
-        
       </div>
     </div>
   </div>
@@ -216,6 +186,6 @@
       });
     });
   </script>
-  
 </body>
+
 </html>
