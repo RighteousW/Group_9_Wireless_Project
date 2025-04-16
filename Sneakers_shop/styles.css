@@ -282,3 +282,35 @@ footer a {
 .accent {
   color: var(--accent-color);
 }
+
+/*gallery section*/
+.gallery-section {
+  padding: 2rem;
+  background-color: #e8e0e0;
+  color: white;
+  overflow: hidden;
+}
+.gallery-section h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.gallery-container {
+  overflow: hidden;
+  width: 100%;
+}
+.image-track {
+  display: flex;
+  width: max-content;
+  animation: scrollGallery 20s linear infinite;
+}
+.image-track img {
+  width: 300px;
+  height: auto;
+  margin-right: 1rem;
+  border-radius: 12px;
+  object-fit: cover;
+}
+@keyframes scrollGallery {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
