@@ -1,36 +1,30 @@
-// const track = document.getElementById("imageTrack");
-const gap = 16; // 1rem
-let lastTimestamp = performance.now();
+const track = document.getElementById("imageTrack");
+const gap = 16; // px gap between cards
+const speed = 1; // px per frame
 
-function loop(timestamp) {
-    const dt = timestamp - lastTimestamp;
-    lastTimestamp = timestamp;
+let currentX = 0;
 
-    const speed = (track.scrollWidth / 2) / 40000; // 50% over 40s
-    const deltaX = speed * dt;
+function loop() {
+  currentX -= speed;
+  track.style.transform = `translateX(${currentX}px)`;
 
-    const firstCard = track.querySelector(".card");
-    const firstCardRect = firstCard.getBoundingClientRect();
-    const containerRect = track.parentElement.getBoundingClientRect();
+  const firstCard = track.querySelector(".card");
+  if (!firstCard) return requestAnimationFrame(loop); // safety check
 
-    if (firstCardRect.right < containerRect.left) {
-        // Move first card to the end
-        track.appendChild(firstCard);
+  const firstCardRect = firstCard.getBoundingClientRect();
+  const containerRect = track.parentElement.getBoundingClientRect();
 
-        // Cancel animation, manually adjust transform, then restart animation
-        const currentTransform = getComputedStyle(track).transform;
-        const matrix = new DOMMatrix(currentTransform);
-        const currentX = matrix.m41;
+  // When card is completely off-screen to the left
+  if (firstCardRect.right < containerRect.left) {
+    // Move the first card to the end
+    track.appendChild(firstCard);
+    
+    // Adjust currentX so there's no visual jump
+    currentX += firstCard.offsetWidth + gap;
+    track.style.transform = `translateX(${currentX}px)`;
+  }
 
-        track.style.animation = "none";
-        track.style.transform = `translateX(${currentX + firstCard.offsetWidth + gap}px)`;
-
-        // Force reflow and restart animation
-        void track.offsetWidth;
-        track.style.animation = "scroll-left 40s linear infinite";
-    }
-
-    requestAnimationFrame(loop);
+  requestAnimationFrame(loop);
 }
 
 requestAnimationFrame(loop);

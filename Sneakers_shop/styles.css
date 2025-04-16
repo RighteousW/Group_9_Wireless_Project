@@ -304,7 +304,6 @@ footer a {
 .image-track {
   display: flex;
   gap: 1rem;
-  animation: scroll-left 40s linear infinite;
   will-change: transform;
 }
 
