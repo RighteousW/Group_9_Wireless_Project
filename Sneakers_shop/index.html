@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="styles.css" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+  <script type="module" src="gallery_infinite_scroll.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700&display=swap" rel="stylesheet">
 
 </head>
@@ -113,18 +114,17 @@
     <h2>Gallery</h2>
     <div class="gallery-container">
       <div class="image-track" id="imageTrack">
-        <img src="Images/gallery/img1.webp" alt="Image 1">
-        <img src="Images/gallery/img2.webp" alt="Image 2">
-        <img src="Images/gallery/img3.webp" alt="Image 3">
-        <img src="Images/gallery/img4.webp" alt="Image 4">
-        <img src="Images/gallery/img5.webp" alt="Image 5">
-        <img src="Images/gallery/img6.webp" alt="Image 6">
-        <img src="Images/gallery/img7.webp" alt="Image 7">
-        <img src="Images/gallery/img8.webp" alt="Image 8">
+        <img src="Images/gallery/img1.webp" alt="Image 1" class="card">
+        <img src="Images/gallery/img2.webp" alt="Image 2" class="card">
+        <img src="Images/gallery/img3.webp" alt="Image 3" class="card">
+        <img src="Images/gallery/img4.webp" alt="Image 4" class="card">
+        <img src="Images/gallery/img5.webp" alt="Image 5" class="card">
+        <img src="Images/gallery/img6.webp" alt="Image 6" class="card">
+        <img src="Images/gallery/img7.webp" alt="Image 7" class="card">
+        <img src="Images/gallery/img8.webp" alt="Image 8" class="card">
       </div>
     </div>
   </section>
-  
 
   <div class="main-container">
     <model-viewer id="warriorModel" src="Images/warrior_sneaker_with_sole.glb" alt="3D Warrior Sneaker" auto-rotate
@@ -153,35 +153,41 @@
     </div>
   </div>
 
-  <section class="warrior-cta-section" style="padding: 4rem 2rem; background-color: white; text-align: center; border-top: 1px solid #f0f0f0;">
+  <section class="warrior-cta-section"
+    style="padding: 4rem 2rem; background-color: white; text-align: center; border-top: 1px solid #f0f0f0;">
     <div style="max-width: 800px; margin: 0 auto;">
       <h2 style="font-size: 1.8rem; margin-bottom: 1.5rem; color: #000;">ELEVATE YOUR GAME</h2>
-      
+
       <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 1.5rem; margin: 2rem 0;">
-        <div style="flex: 1; min-width: 250px; padding: 1.5rem; background: #f9f9f9; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.05);">
+        <div
+          style="flex: 1; min-width: 250px; padding: 1.5rem; background: #f9f9f9; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.05);">
           <h3 style="margin: 0 0 1rem 0; font-size: 1.1rem; color: #000;">BATTLE-PROVEN</h3>
           <p style="margin: 0; color: #666; font-size: 0.95rem;">Tested by athletes on all surfaces</p>
         </div>
-        
-        <div style="flex: 1; min-width: 250px; padding: 1.5rem; background: #f9f9f9; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.05);">
+
+        <div
+          style="flex: 1; min-width: 250px; padding: 1.5rem; background: #f9f9f9; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.05);">
           <h3 style="margin: 0 0 1rem 0; font-size: 1.1rem; color: #000;">COMMUNITY APPROVED</h3>
           <p style="margin: 0; color: #666; font-size: 0.95rem;">5,000+ warriors can't be wrong</p>
         </div>
       </div>
-      
-      <a href="#shop" class="action-button" style="margin-top: 1.5rem; padding: 12px 30px; background: #000; color: white; border: none; border-radius: 25px; font-weight: 600; text-decoration: none; display: inline-block;">
+
+      <a href="#shop" class="action-button"
+        style="margin-top: 1.5rem; padding: 12px 30px; background: #000; color: white; border: none; border-radius: 25px; font-weight: 600; text-decoration: none; display: inline-block;">
         JOIN THE MOVEMENT →
       </a>
     </div>
   </section>
-  
+
   <section style="background: #f8f8f8; padding: 3rem 2rem; text-align: center;">
     <div style="max-width: 500px; margin: 0 auto;">
       <p style="letter-spacing: 1px; margin-bottom: 0.5rem; font-size: 0.9rem; color: #666;">NEXT-LEVEL PERFORMANCE</p>
       <h3 style="font-size: 1.5rem; margin: 0 0 1.5rem 0; color: #000;">WARRIOR PRO - COMING SOON</h3>
       <form style="display: flex; justify-content: center; max-width: 400px; margin: 0 auto; gap: 8px;">
-        <input type="email" placeholder="Your email" style="padding: 12px; width: 70%; border: 1px solid #ddd; border-radius: 25px; font-size: 0.9rem; background: white;">
-        <button type="submit" style="padding: 12px 20px; background: #000; color: white; border: none; border-radius: 25px; font-weight: 600; cursor: pointer;">
+        <input type="email" placeholder="Your email"
+          style="padding: 12px; width: 70%; border: 1px solid #ddd; border-radius: 25px; font-size: 0.9rem; background: white;">
+        <button type="submit"
+          style="padding: 12px 20px; background: #000; color: white; border: none; border-radius: 25px; font-weight: 600; cursor: pointer;">
           NOTIFY ME
         </button>
       </form>

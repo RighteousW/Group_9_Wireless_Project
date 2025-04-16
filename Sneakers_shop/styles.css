@@ -54,14 +54,14 @@ model-viewer {
   height: 500px;
   background-color: #fff;
   border-radius: 12px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
 
 .sidebar {
   background-color: white;
   padding: 2rem;
   border-radius: 12px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
   max-width: 350px;
   width: 100%;
 }
@@ -286,31 +286,43 @@ footer a {
 /*gallery section*/
 .gallery-section {
   padding: 2rem;
-  background-color: #e8e0e0;
+  background: #111;
   color: white;
-  overflow: hidden;
 }
+
 .gallery-section h2 {
   text-align: center;
   margin-bottom: 1rem;
 }
+
 .gallery-container {
   overflow: hidden;
-  width: 100%;
+  position: relative;
+  height: 220px;
 }
+
 .image-track {
   display: flex;
-  width: max-content;
-  animation: scrollGallery 20s linear infinite;
+  gap: 1rem;
+  animation: scroll-left 40s linear infinite;
+  will-change: transform;
 }
-.image-track img {
+
+.card {
   width: 300px;
-  height: auto;
-  margin-right: 1rem;
+  height: 200px;
   border-radius: 12px;
   object-fit: cover;
+  flex-shrink: 0;
+  background: #333;
 }
-@keyframes scrollGallery {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
+
+@keyframes scroll-left {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
 }
