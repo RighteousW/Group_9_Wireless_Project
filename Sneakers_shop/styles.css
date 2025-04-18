@@ -286,8 +286,8 @@ footer a {
 /*gallery section*/
 .gallery-section {
   padding: 2rem;
-  background: #111;
-  color: white;
+  background: var(--bg-color);
+  color: var(--font-main);
 }
 
 .gallery-section h2 {
@@ -298,7 +298,7 @@ footer a {
 .gallery-container {
   overflow: hidden;
   position: relative;
-  height: 220px;
+  height: 600px;
 }
 
 .image-track {
@@ -308,11 +308,9 @@ footer a {
 }
 
 .card {
-  width: 300px;
-  height: 200px;
+  height: 600px;
   border-radius: 12px;
   object-fit: cover;
-  flex-shrink: 0;
   background: #333;
 }
 
