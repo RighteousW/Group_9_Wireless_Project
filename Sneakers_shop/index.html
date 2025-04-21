@@ -7,7 +7,6 @@
   <link rel="stylesheet" href="styles.css" />
   <link rel="stylesheet" href="gallery_model_styles.css">
   <!-- <link rel="stylesheet" href="scroll_fade.css"> -->
-
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
   <script type="module" src="sneaker_model_color_picker.js"></script>
@@ -27,29 +26,23 @@
     </nav>
   </header>
 
-  <section class="hero-section">
-    <div class="hero-text">
-      <h1 class="headline">Warrior Sneaker</h1>
-      <h2 class="subheadline">Conquer the streets in legendary style</h2>
-      <p class="description">Designed for performance and built to last, Warrior Sneaker is the ultimate fusion of
-        comfort, power, and bold aesthetics.</p>
-      <div class="action-group">
-        <button class="action-button">Shop Now</button>
-        <p class="social-proof">5,000 sneakerheads already made the switch!</p>
-      </div>
+  <div class="hero-text">
+    <h1 class="headline">Warrior Sneaker</h1>
+    <h2 class="subheadline">Conquer the streets in legendary style</h2>
+    <p class="description">Designed for performance and built to last, Warrior Sneaker is the ultimate fusion of comfort, power, and bold aesthetics.</p>
+    <div class="action-group">
+      <button class="action-button">Shop Now</button>
+      <p class="social-proof">5,000 sneakerheads already made the switch!</p>
     </div>
-    <div class="hero-image">
-      <img src="Images/il_794xN.5711605874_lw5k.avif" alt="Warrior Sneaker Design" />
-    </div>
-  </section>
-
+  </div>
+  <div class="hero-image">
+    <img src="Images/il_794xN.5711605874_lw5k.avif" alt="Warrior Sneaker Design" />
+  </div>
   <section class="warrior-sneaker-section">
     <div class="sneaker-content">
       <div class="sneaker-text">
         <h2>Unleash Your Inner Warrior with Every Step</h2>
-        <p>The Warrior Sneaker is engineered for those who walk with purpose. Designed with advanced cushioning, premium
-          materials, and bold style, this sneaker transforms your everyday stride into a statement of strength and
-          resilience.</p>
+        <p>The Warrior Sneaker is engineered for those who walk with purpose. Designed with advanced cushioning, premium materials, and bold style, this sneaker transforms your everyday stride into a statement of strength and resilience.</p>
         <ul>
           <li>High-performance sole for superior grip and comfort</li>
           <li>Breathable mesh upper to keep your feet cool</li>
@@ -65,11 +58,10 @@
 
   <!-- New section added here -->
   <section class="sneaker-features-section">
-    <h1 class="sneaker-features-headline">Warrior Sneaker <span class="accent">Pro</span> - dominate the streets in
-      ultimate comfort</h1>
 
-    <p class="sneaker-features-subhead">Engineered for champions who refuse to settle. The Warrior Sneaker Pro combines
-      cutting-edge technology with bold street style to power through your toughest challenges.</p>
+    <h1 class="sneaker-features-headline">Warrior Sneaker <span class="accent">Pro</span> - dominate the streets in ultimate comfort</h1>
+    
+    <p class="sneaker-features-subhead">Engineered for champions who refuse to settle. The Warrior Sneaker Pro combines cutting-edge technology with bold street style to power through your toughest challenges.</p>
 
     <ul class="sneaker-features-list">
       <li class="sneaker-feature-item" data-checked="false">Showcase your style with premium materials</li>
@@ -157,7 +149,6 @@
             <option value="Sole">Sole</option>
           </select>
         </div>
-
         <div class="color-picker-container">
           <canvas id="color-wheel" width="200" height="200"></canvas>
           <div id="output"></div>
@@ -207,15 +198,239 @@
     </div>
   </section>
 
-  <footer>
-    <p>© 2025 Warrior Kicks. All rights reserved.</p>
-    <p>
-      <a href="#">Instagram</a> |
-      <a href="#">TikTok</a> |
-      <a href="#">YouTube</a>
-    </p>
+  <section class="warrior-cta-section" style="padding: 4rem 2rem; background-color: #fefefe; text-align: center; border-top: 1px solid #eaeaea;">
+    <style>
+      @keyframes bounce {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-15px); }
+      }
+  
+      @keyframes glowPulse {
+        0%, 100% {
+          box-shadow: 0 0 12px #66ffcc, 0 0 24px #66ffcc;
+        }
+        50% {
+          box-shadow: 0 0 24px #00ff99, 0 0 48px #00ff99;
+        }
+      }
+  
+      .bouncing-heading {
+        font-size: 2.5rem;
+        color: #2b4c38;
+        margin-bottom: 2rem;
+        animation: bounce 1.8s ease-in-out infinite;
+        font-weight: bold;
+        letter-spacing: 2px;
+      }
+  
+      .glow-button:hover {
+        animation: glowPulse 1.8s infinite;
+      }
+  
+      .glowing-box {
+        animation: glowPulse 2s infinite;
+      }
+  
+      .fade-in {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: all 0.8s ease-in-out;
+      }
+  
+      .fade-in.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+  
+      /* Popup styling */
+      .popup {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: none;
+        background: rgba(0,0,0,0.5);
+        align-items: center;
+        justify-content: center;
+        z-index: 9999;
+      }
+  
+      .popup-content {
+        background: white;
+        padding: 2rem;
+        border-radius: 10px;
+        max-width: 400px;
+        width: 90%;
+        box-shadow: 0 0 20px rgba(0,0,0,0.2);
+        text-align: left;
+      }
+  
+      .popup-content h3 {
+        margin-top: 0;
+        font-size: 1.3rem;
+        color: #2b4c38;
+      }
+  
+      .popup-content input,
+      .popup-content button {
+        width: 100%;
+        padding: 10px;
+        margin-top: 10px;
+        border-radius: 8px;
+        font-size: 1rem;
+      }
+  
+      .popup-content input {
+        border: 1px solid #ccc;
+      }
+  
+      .popup-content button {
+        background-color: #2b4c38;
+        color: white;
+        border: none;
+        cursor: pointer;
+      }
+  
+      .popup-content .close-btn {
+        background: #ddd;
+        color: #333;
+      }
+    </style>
+  
+    <div style="max-width: 800px; margin: 0 auto;">
+      <h2 class="bouncing-heading">ELEVATE YOUR GAME</h2>
+  
+      <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 1.5rem; margin: 2rem 0;">
+        <div class="fade-in glowing-box" style="flex: 1; min-width: 250px; padding: 1.5rem; background: #f4f8f5; border-radius: 8px; box-shadow: 0 2px 12px rgba(0,0,0,0.08);">
+          <h3 style="margin: 0 0 1rem 0; font-size: 1.1rem; color: #2a2a2a;">BATTLE-PROVEN</h3>
+          <p style="margin: 0; color: #444; font-size: 0.95rem;">Tested by athletes on all surfaces</p>
+        </div>
+  
+        <div class="fade-in glowing-box" style="flex: 1; min-width: 250px; padding: 1.5rem; background: #f4f8f5; border-radius: 8px; box-shadow: 0 2px 12px rgba(0,0,0,0.08);">
+          <h3 style="margin: 0 0 1rem 0; font-size: 1.1rem; color: #2a2a2a;">COMMUNITY APPROVED</h3>
+          <p style="margin: 0; color: #444; font-size: 0.95rem;">5,000+ warriors can't be wrong</p>
+        </div>
+      </div>
+  
+      <button class="action-button glow-button fade-in" onclick="document.getElementById('popup').style.display='flex'" style="margin-top: 1.5rem; padding: 12px 30px; background: #2b4c38; color: white; border: none; border-radius: 25px; font-weight: 600; text-decoration: none; display: inline-block;">
+        JOIN THE MOVEMENT →
+      </button>
+    </div>
+  
+    <!-- Registration Popup -->
+    <div class="popup" id="popup">
+      <div class="popup-content">
+        <h3>Register Now</h3>
+        <input type="text" id="fullName" placeholder="Full Name" required>
+        <input type="email" id="email" placeholder="Email Address" required>
+        <input type="password" id="password" placeholder="Password" required>
+        <button onclick="registerUser()">Register</button>
+        <button class="close-btn" onclick="document.getElementById('popup').style.display='none'">Close</button>
+      </div>
+    </div>
+  
+    <script>
+      const faders = document.querySelectorAll('.fade-in');
+      const appearOptions = {
+        threshold: 0.3,
+        rootMargin: '0px 0px -50px 0px'
+      };
+  
+      const appearOnScroll = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (!entry.isIntersecting) return;
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        });
+      }, appearOptions);
+  
+      faders.forEach(fader => {
+        appearOnScroll.observe(fader);
+      });
+  
+      // Registration form functionality
+      function registerUser() {
+        const name = document.getElementById('fullName').value;
+        const email = document.getElementById('email').value;
+        const password = document.getElementById('password').value;
+  
+        if (name && email && password) {
+          alert('Registration Successful! Welcome ' + name);
+          // Here you would normally send the data to the backend (e.g., with an AJAX request).
+          document.getElementById('popup').style.display = 'none'; // Close the popup
+        } else {
+          alert('Please fill in all fields!');
+        }
+      }
+    </script>
+  </section>
+
+  <footer style="background-color: #000; color: white; text-align: center; padding: 2rem 0; position: relative; bottom: 0; width: 100%;">
+    <style>
+      /* Hover effect for social media links */
+      footer a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 1.2rem;
+        transition: color 0.3s ease, transform 0.3s ease;
+      }
+  
+      footer a:hover {
+        color: #66ffcc;
+        transform: scale(1.1);
+      }
+  
+      /* Glowing footer text effect */
+      footer p {
+        margin: 0.5rem 0;
+        font-size: 1rem;
+        color: #bbb;
+      }
+  
+      footer p a:hover {
+        text-decoration: underline;
+        color: #66ffcc;
+      }
+  
+      /* Fade-in effect when footer appears on scroll */
+      .footer-fade-in {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: all 1s ease-in-out;
+      }
+  
+      .footer-fade-in.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    </style>
+  
+    <div class="footer-fade-in">
+      <p>© 2025 Warrior Kicks. All rights reserved.</p>
+      <p>
+        <a href="#">Instagram</a> |
+        <a href="#">TikTok</a> |
+        <a href="#">YouTube</a>
+      </p>
+    </div>
+  
+    <script>
+      // Footer fade-in effect on scroll
+      const footer = document.querySelector('.footer-fade-in');
+      const footerObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, {
+        threshold: 0.1,
+      });
+  
+      footerObserver.observe(footer);
+    </script>
   </footer>
-
-</body>
-
+  
 </html>
