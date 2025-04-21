@@ -1,300 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>Warrior Kicks</title>
-  <link rel="stylesheet" href="styles.css"/>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="gallery_model_styles.css">
+  <!-- <link rel="stylesheet" href="scroll_fade.css"> -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+  <script type="module" src="sneaker_model_color_picker.js"></script>
+  <!-- <script type="module" src="scroll_fade.js"></script> -->
+  <script type="module" src="slider.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700&display=swap" rel="stylesheet">
 
-  <style>
-    :root {
-      --primary-color: #111;
-      --accent-color: #FF3C3C;
-      --bg-color: #f4f4f4;
-      --text-dark: #222;
-      --text-light: #555;
-      --font-main: 'Outfit', sans-serif;
-    }
-
-    * {
-      box-sizing: border-box;
-      padding: 0;
-      margin: 0;
-    }
-
-    body {
-      font-family: var(--font-main);
-      background-color: var(--bg-color);
-      color: var(--text-dark);
-    }
-
-    header {
-      background: var(--primary-color);
-      color: white;
-      padding: 1rem 2rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    header h1 {
-      font-size: 2rem;
-    }
-
-    nav a {
-      color: white;
-      margin-left: 2rem;
-      text-decoration: none;
-      font-weight: 500;
-    }
-
-    .main-container {
-      display: flex;
-      flex-direction: row;
-      padding: 2rem;
-      gap: 2rem;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-
-    model-viewer {
-      width: 100%;
-      max-width: 700px;
-      height: 500px;
-      background-color: #fff;
-      border-radius: 12px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.2);
-    }
-
-    .sidebar {
-      background-color: white;
-      padding: 2rem;
-      border-radius: 12px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-      max-width: 350px;
-      width: 100%;
-    }
-
-    .sidebar h2 {
-      font-size: 1.4rem;
-      margin-bottom: 1rem;
-    }
-
-    .color-options {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-    }
-
-    .color-swatch {
-      width: 40px;
-      height: 40px;
-      border-radius: 8px;
-      cursor: pointer;
-      border: 2px solid transparent;
-    }
-
-    .color-swatch:hover {
-      border-color: var(--accent-color);
-    }
-
-    footer {
-      background: #111;
-      color: #bbb;
-      padding: 2rem;
-      text-align: center;
-      margin-top: 4rem;
-    }
-
-    footer a {
-      color: white;
-      margin: 0 1rem;
-      text-decoration: none;
-    }
-
-    @media (max-width: 768px) {
-      .main-container {
-        flex-direction: column;
-        align-items: center;
-      }
-    }
-
-    .hero {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 4rem 2rem;
-      flex-wrap: wrap;
-    }
-
-    .hero-text {
-      max-width: 500px;
-    }
-
-    .headline {
-      font-size: 2.8rem;
-      font-weight: 800;
-      margin-bottom: 1rem;
-    }
-
-    .subheadline {
-      font-size: 1.5rem;
-      font-weight: 600;
-      margin-bottom: 1rem;
-    }
-
-    .description {
-      font-size: 1rem;
-      margin-bottom: 2rem;
-      color: black;
-    }
-
-    .action-group {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-    }
-
-    .action-button {
-      background-color: black;
-      color: #fff;
-      border: none;
-      padding: 0.75rem 1.5rem;
-      font-size: 1rem;
-      font-weight: bold;
-      border-radius: 4px;
-      cursor: pointer;
-    }
-
-    .social-proof {
-      font-size: 0.9rem;
-      color: black;
-    }
-
-    .hero-image {
-      flex: 1 1 40%;
-      text-align: right;
-      position: relative;
-      top: -60px;
-    }
-
-    .hero-image img {
-      max-width: 450px;
-      width: 100%;
-    }
-
-    .warrior-sneaker-section {
-      padding: 4rem 2rem;
-      background-color: #fff;
-    }
-
-    .sneaker-content {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 2rem;
-    }
-
-    .sneaker-text {
-      flex: 1 1 50%;
-      color: black;
-    }
-
-    .sneaker-text h2 {
-      font-size: 2rem;
-      font-weight: 700;
-      margin-bottom: 1rem;
-    }
-
-    .sneaker-text p {
-      font-size: 1rem;
-      margin-bottom: 1rem;
-      line-height: 1.6;
-    }
-
-    .sneaker-text ul {
-      list-style: disc;
-      padding-left: 1.5rem;
-      color: black;
-    }
-
-    .sneaker-image {
-      flex: 1 1 40%;
-      text-align: right;
-      position: relative;
-      top: -50px;
-    }
-
-    .sneaker-image img {
-      max-width: 100%;
-      height: auto;
-    }
-
-    /* New section styles */
-    .sneaker-features-section {
-      padding: 4rem 2rem;
-      background-color: var(--bg-color);
-      text-align: center;
-    }
-
-    .sneaker-features-headline {
-      font-size: 2.5rem;
-      font-weight: 700;
-      line-height: 1.2;
-      margin-bottom: 20px;
-      color: var(--text-dark);
-    }
-
-    .sneaker-features-subhead {
-      font-size: 1.2rem;
-      max-width: 700px;
-      margin: 0 auto 40px;
-      color: var(--text-light);
-    }
-
-    .sneaker-features-list {
-      list-style: none;
-      padding: 0;
-      max-width: 500px;
-      margin: 0 auto;
-      text-align: left;
-    }
-
-    .sneaker-feature-item {
-      padding: 12px 0;
-      font-size: 1.1rem;
-      position: relative;
-      padding-left: 40px;
-    }
-
-    .sneaker-feature-item:before {
-      content: "";
-      position: absolute;
-      left: 0;
-      top: 14px;
-      width: 22px;
-      height: 22px;
-      border: 2px solid #ddd;
-      border-radius: 4px;
-      background-color: white;
-    }
-
-    .sneaker-feature-item[data-checked="true"]:before {
-      background-color: var(--primary-color);
-      border-color: var(--primary-color);
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'%3E%3C/polyline%3E%3C/svg%3E");
-      background-repeat: no-repeat;
-      background-position: center;
-    }
-
-    .accent {
-      color: var(--accent-color);
-    }
-  </style>
 </head>
+
 <body>
   <header>
     <h1>Warrior Kicks</h1>
@@ -317,7 +38,6 @@
   <div class="hero-image">
     <img src="Images/il_794xN.5711605874_lw5k.avif" alt="Warrior Sneaker Design" />
   </div>
-
   <section class="warrior-sneaker-section">
     <div class="sneaker-content">
       <div class="sneaker-text">
@@ -338,10 +58,11 @@
 
   <!-- New section added here -->
   <section class="sneaker-features-section">
+
     <h1 class="sneaker-features-headline">Warrior Sneaker <span class="accent">Pro</span> - dominate the streets in ultimate comfort</h1>
     
     <p class="sneaker-features-subhead">Engineered for champions who refuse to settle. The Warrior Sneaker Pro combines cutting-edge technology with bold street style to power through your toughest challenges.</p>
-    
+
     <ul class="sneaker-features-list">
       <li class="sneaker-feature-item" data-checked="false">Showcase your style with premium materials</li>
       <li class="sneaker-feature-item" data-checked="true">Available now in limited edition colors</li>
@@ -350,68 +71,132 @@
   </section>
 
   <!-- Testimonials Section -->
-<section class="testimonials-section" style="padding: 4rem 2rem; background-color: #f8f8f8; text-align: center;">
-  <div style="max-width: 800px; margin: 0 auto;">
-    <h2 style="font-size: 2rem; margin-bottom: 2rem; color: var(--primary-color);">What Our Warriors Say</h2>
-    
-    <div style="display: flex; flex-wrap: wrap; gap: 2rem; justify-content: center;">
-      <!-- Testimonial 1 -->
-      <div style="flex: 1 1 300px; background: white; padding: 2rem; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
-        <p style="font-style: italic; margin-bottom: 1.5rem; color: var(--text-light);">"The Warrior Sneaker changed my game completely. The comfort and support are unmatched, whether I'm on the court or the streets. All-day wear with zero fatigue - just pure performance."</p>
-        <div style="font-weight: 600;">Alex Johnson</div>
-        <div style="color: var(--text-light); font-size: 0.9rem;">Professional Basketball Player</div>
-      </div>
-      
-      <!-- Testimonial 2 -->
-      <div style="flex: 1 1 300px; background: white; padding: 2rem; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
-        <p style="font-style: italic; margin-bottom: 1.5rem; color: var(--text-light);">"From the first step, I knew these were special. The Warrior Sneaker combines cutting-edge tech with streetwear aesthetics perfectly. My collection has never looked better."</p>
-        <div style="font-weight: 600;">Jamie Chen</div>
-        <div style="color: var(--text-light); font-size: 0.9rem;">Sneaker Collector</div>
-      </div>
-      
-      <!-- Testimonial 3 -->
-      <div style="flex: 1 1 300px; background: white; padding: 2rem; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
-        <p style="font-style: italic; margin-bottom: 1.5rem; color: var(--text-light);">"As a runner, I demand performance. The Warrior Sneaker delivers with its responsive cushioning and breathable design. Mile after mile, they keep getting better."</p>
-        <div style="font-weight: 600;">Taylor Smith</div>
-        <div style="color: var(--text-light); font-size: 0.9rem;">Marathon Runner</div>
+  <section class="testimonials-section" style="padding: 4rem 2rem; background-color: #f8f8f8; text-align: center;">
+    <div style="max-width: 800px; margin: 0 auto;">
+      <h2 style="font-size: 2rem; margin-bottom: 2rem; color: var(--primary-color);">What Our Warriors Say</h2>
+
+      <div style="display: flex; flex-wrap: wrap; gap: 2rem; justify-content: center;">
+        <!-- Testimonial 1 -->
+        <div
+          style="flex: 1 1 300px; background: white; padding: 2rem; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+          <p style="font-style: italic; margin-bottom: 1.5rem; color: var(--text-light);">"The Warrior Sneaker changed
+            my game completely. The comfort and support are unmatched, whether I'm on the court or the streets. All-day
+            wear with zero fatigue - just pure performance."</p>
+          <div style="font-weight: 600;">Alex Johnson</div>
+          <div style="color: var(--text-light); font-size: 0.9rem;">Professional Basketball Player</div>
+        </div>
+
+        <!-- Testimonial 2 -->
+        <div
+          style="flex: 1 1 300px; background: white; padding: 2rem; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+          <p style="font-style: italic; margin-bottom: 1.5rem; color: var(--text-light);">"From the first step, I knew
+            these were special. The Warrior Sneaker combines cutting-edge tech with streetwear aesthetics perfectly. My
+            collection has never looked better."</p>
+          <div style="font-weight: 600;">Jamie Chen</div>
+          <div style="color: var(--text-light); font-size: 0.9rem;">Sneaker Collector</div>
+        </div>
+
+        <!-- Testimonial 3 -->
+        <div
+          style="flex: 1 1 300px; background: white; padding: 2rem; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+          <p style="font-style: italic; margin-bottom: 1.5rem; color: var(--text-light);">"As a runner, I demand
+            performance. The Warrior Sneaker delivers with its responsive cushioning and breathable design. Mile after
+            mile, they keep getting better."</p>
+          <div style="font-weight: 600;">Taylor Smith</div>
+          <div style="color: var(--text-light); font-size: 0.9rem;">Marathon Runner</div>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-  <div class="main-container">
-    <model-viewer 
-      id="warriorModel"
-      src="Images/warrior_sneaker_with_sole.glb" 
-      alt="3D Warrior Sneaker"
-      auto-rotate 
-      camera-controls 
-      ar 
-      shadow-intensity="1"
-      background-color="#fff">
-    </model-viewer>
+  <section class="gallery-section">
+    <h2 style="font-size: 2rem; margin-bottom: 2rem; color: var(--primary-color);">Warrior Favorites</h2>
+    <div class="slider">
+      <div class="list">
+        <div class="item"><img src="Images/gallery/img2.webp" alt="Image 2"></div>
+        <div class="item"><img src="Images/gallery/img3.webp" alt="Image 3"></div>
+        <div class="item"><img src="Images/gallery/img4.webp" alt="Image 4"></div>
+        <div class="item"><img src="Images/gallery/img5.webp" alt="Image 5"></div>
+        <div class="item"><img src="Images/gallery/img6.webp" alt="Image 6"></div>
+        <div class="item"><img src="Images/gallery/img7.webp" alt="Image 7"></div>
+        <div class="item"><img src="Images/gallery/img8.webp" alt="Image 8"></div>
+  
+        <!-- Duplicate list for seamless scroll -->
+        <div class="item"><img src="Images/gallery/img2.webp" alt="Image 2"></div>
+        <div class="item"><img src="Images/gallery/img3.webp" alt="Image 3"></div>
+        <div class="item"><img src="Images/gallery/img4.webp" alt="Image 4"></div>
+        <div class="item"><img src="Images/gallery/img5.webp" alt="Image 5"></div>
+        <div class="item"><img src="Images/gallery/img6.webp" alt="Image 6"></div>
+        <div class="item"><img src="Images/gallery/img7.webp" alt="Image 7"></div>
+        <div class="item"><img src="Images/gallery/img8.webp" alt="Image 8"></div>
+      </div>
+    </div>
+  </section>
 
-    <div class="sidebar">
-      <h2>Customize Your Warrior</h2>
-      <div class="color-options">
-        <div class="color-swatch" style="background: #000;"></div>
-        <div class="color-swatch" style="background: #fff; border: 1px solid #ccc;"></div>
-        <div class="color-swatch" style="background: #ff3c3c;"></div>
-        <div class="color-swatch" style="background: #1e90ff;"></div>
-        <div class="color-swatch" style="background: #4CAF50;"></div>
-        <div class="color-swatch" style="background: #FFD700;"></div>
+  <section class="model-customizer">
+    <h1>Customize Your Warrior</h1>
 
-        <div style="margin-bottom: 1rem;">
-          <label for="materialSelect"><strong>Target:</strong></label>
-          <select id="materialSelect" style="margin-left: 0.5rem; padding: 0.3rem;">
-            <option value="Purpleshoe">Shoe</option>
+    <div class="model-body">
+      <model-viewer id="warriorModel" src="Images/warrior_sneaker_with_sole.glb" alt="3D Warrior Sneaker" auto-rotate
+        camera-controls ar shadow-intensity="1">
+      </model-viewer>
+
+      <div class="model-sidebar">
+        <div class="model-material-select">
+          <select id="materialSelect">
+            <option value="Purpleshoe">Upper shoe</option>
             <option value="LacesFlatMaterial">Laces</option>
             <option value="Sole">Sole</option>
           </select>
         </div>
+        <div class="color-picker-container">
+          <canvas id="color-wheel" width="200" height="200"></canvas>
+          <div id="output"></div>
+        </div>
       </div>
     </div>
-  </div>
+  </section>
+
+  <section class="warrior-cta-section"
+    style="padding: 4rem 2rem; background-color: white; text-align: center; border-top: 1px solid #f0f0f0;">
+    <div style="max-width: 800px; margin: 0 auto;">
+      <h2 style="font-size: 1.8rem; margin-bottom: 1.5rem; color: #000;">ELEVATE YOUR GAME</h2>
+
+      <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 1.5rem; margin: 2rem 0;">
+        <div
+          style="flex: 1; min-width: 250px; padding: 1.5rem; background: #f9f9f9; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.05);">
+          <h3 style="margin: 0 0 1rem 0; font-size: 1.1rem; color: #000;">BATTLE-PROVEN</h3>
+          <p style="margin: 0; color: #666; font-size: 0.95rem;">Tested by athletes on all surfaces</p>
+        </div>
+
+        <div
+          style="flex: 1; min-width: 250px; padding: 1.5rem; background: #f9f9f9; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.05);">
+          <h3 style="margin: 0 0 1rem 0; font-size: 1.1rem; color: #000;">COMMUNITY APPROVED</h3>
+          <p style="margin: 0; color: #666; font-size: 0.95rem;">5,000+ warriors can't be wrong</p>
+        </div>
+      </div>
+
+      <a href="#shop" class="action-button"
+        style="margin-top: 1.5rem; padding: 12px 30px; background: #000; color: white; border: none; border-radius: 25px; font-weight: 600; text-decoration: none; display: inline-block;">
+        JOIN THE MOVEMENT →
+      </a>
+    </div>
+  </section>
+
+  <section style="background: #f8f8f8; padding: 3rem 2rem; text-align: center;">
+    <div style="max-width: 500px; margin: 0 auto;">
+      <p style="letter-spacing: 1px; margin-bottom: 0.5rem; font-size: 0.9rem; color: #666;">NEXT-LEVEL PERFORMANCE</p>
+      <h3 style="font-size: 1.5rem; margin: 0 0 1.5rem 0; color: #000;">WARRIOR PRO - COMING SOON</h3>
+      <form style="display: flex; justify-content: center; max-width: 400px; margin: 0 auto; gap: 8px;">
+        <input type="email" placeholder="Your email"
+          style="padding: 12px; width: 70%; border: 1px solid #ddd; border-radius: 25px; font-size: 0.9rem; background: white;">
+        <button type="submit"
+          style="padding: 12px 20px; background: #000; color: white; border: none; border-radius: 25px; font-weight: 600; cursor: pointer;">
+          NOTIFY ME
+        </button>
+      </form>
+    </div>
+  </section>
 
   <section class="warrior-cta-section" style="padding: 4rem 2rem; background-color: #fefefe; text-align: center; border-top: 1px solid #eaeaea;">
     <style>
@@ -648,47 +433,4 @@
     </script>
   </footer>
   
-
-  <script type="module">
-    const modelViewer = document.getElementById('warriorModel');
-    const swatches = document.querySelectorAll('.color-swatch');
-    const materialSelect = document.getElementById('materialSelect');
-
-    let activeMaterial = 'Purpleshoe';
-
-    materialSelect.addEventListener('change', () => {
-      activeMaterial = materialSelect.value;
-    });
-
-    function setMaterialColor(materialName, colorString) {
-      const material = modelViewer.model?.materials.find(mat => mat.name === materialName);
-      if (!material) {
-        console.warn(`Material "${materialName}" not found.`);
-        return;
-      }
-
-      const rgba = parseRGBColor(colorString);
-      if (rgba) {
-        material.pbrMetallicRoughness.setBaseColorFactor(rgba);
-      }
-    }
-
-    function parseRGBColor(rgbString) {
-      const match = rgbString.match(/rgb\s*\(\s*(\d+),\s*(\d+),\s*(\d+)\s*\)/i);
-      if (!match) return null;
-
-      const [r, g, b] = match.slice(1, 4).map(n => parseInt(n, 10) / 255);
-      return [r, g, b, 1];
-    }
-
-    modelViewer.addEventListener('load', () => {
-      swatches.forEach(swatch => {
-        swatch.addEventListener('click', () => {
-          const color = getComputedStyle(swatch).backgroundColor;
-          setMaterialColor(activeMaterial, color);
-        });
-      });
-    });
-  </script>
-</body>
 </html>
