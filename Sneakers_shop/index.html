@@ -216,46 +216,8 @@
     </div>
   </section>
 
-  <section class="warrior-cta-section"
-    style="padding: 4rem 2rem; background-color: white; text-align: center; border-top: 1px solid #f0f0f0;">
-    <div style="max-width: 800px; margin: 0 auto;">
-      <h2 style="font-size: 1.8rem; margin-bottom: 1.5rem; color: #000;">ELEVATE YOUR GAME</h2>
+  
 
-      <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 1.5rem; margin: 2rem 0;">
-        <div
-          style="flex: 1; min-width: 250px; padding: 1.5rem; background: #f9f9f9; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.05);">
-          <h3 style="margin: 0 0 1rem 0; font-size: 1.1rem; color: #000;">BATTLE-PROVEN</h3>
-          <p style="margin: 0; color: #666; font-size: 0.95rem;">Tested by athletes on all surfaces</p>
-        </div>
-
-        <div
-          style="flex: 1; min-width: 250px; padding: 1.5rem; background: #f9f9f9; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.05);">
-          <h3 style="margin: 0 0 1rem 0; font-size: 1.1rem; color: #000;">COMMUNITY APPROVED</h3>
-          <p style="margin: 0; color: #666; font-size: 0.95rem;">5,000+ warriors can't be wrong</p>
-        </div>
-      </div>
-
-      <a href="#shop" class="action-button"
-        style="margin-top: 1.5rem; padding: 12px 30px; background: #000; color: white; border: none; border-radius: 25px; font-weight: 600; text-decoration: none; display: inline-block;">
-        JOIN THE MOVEMENT →
-      </a>
-    </div>
-  </section>
-
-  <section style="background: #f8f8f8; padding: 3rem 2rem; text-align: center;">
-    <div style="max-width: 500px; margin: 0 auto;">
-      <p style="letter-spacing: 1px; margin-bottom: 0.5rem; font-size: 0.9rem; color: #666;">NEXT-LEVEL PERFORMANCE</p>
-      <h3 style="font-size: 1.5rem; margin: 0 0 1.5rem 0; color: #000;">WARRIOR PRO - COMING SOON</h3>
-      <form style="display: flex; justify-content: center; max-width: 400px; margin: 0 auto; gap: 8px;">
-        <input type="email" placeholder="Your email"
-          style="padding: 12px; width: 70%; border: 1px solid #ddd; border-radius: 25px; font-size: 0.9rem; background: white;">
-        <button type="submit"
-          style="padding: 12px 20px; background: #000; color: white; border: none; border-radius: 25px; font-weight: 600; cursor: pointer;">
-          NOTIFY ME
-        </button>
-      </form>
-    </div>
-  </section>
 
   <section class="warrior-cta-section" style="padding: 4rem 2rem; background-color: #fefefe; text-align: center; border-top: 1px solid #eaeaea;">
     <style>
@@ -562,13 +524,173 @@
         }
       }
     </script>
+
   </section>
+
+  <style>
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  
+    @keyframes pulseGlow {
+      0% {
+        box-shadow: 0 0 5px rgba(101, 141, 124, 0.5);
+      }
+      50% {
+        box-shadow: 0 0 20px rgba(101, 141, 124, 0.8);
+      }
+      100% {
+        box-shadow: 0 0 5px rgba(101, 141, 124, 0.5);
+      }
+    }
+  
+    @keyframes dramaticShake {
+      0%, 100% {
+        transform: translateX(0);
+      }
+      10%, 30%, 50%, 70%, 90% {
+        transform: translateX(-5px);
+      }
+      20%, 40%, 60%, 80% {
+        transform: translateX(5px);
+      }
+    }
+  
+    .coming-soon-section {
+      background: #f5f7f6;
+      padding: 4rem 2rem;
+      text-align: center;
+      opacity: 0;
+      animation: fadeInUp 0.8s ease-out forwards;
+    }
+  
+    .coming-soon-container {
+      max-width: 500px;
+      margin: 0 auto;
+    }
+  
+    .subtitle {
+      letter-spacing: 1px;
+      margin-bottom: 0.5rem;
+      font-size: 0.9rem;
+      color: #6b7d7d;
+      text-transform: uppercase;
+    }
+  
+    .title {
+      font-size: 1.8rem;
+      margin: 0 0 2rem 0;
+      color: #2a3d45;
+      font-weight: 500;
+      display: inline-block; /* Required for the shake animation */
+    }
+  
+    .title:hover {
+      animation: dramaticShake 0.5s ease-in-out;
+    }
+  
+    .email-form {
+      display: flex;
+      justify-content: center;
+      max-width: 400px;
+      margin: 0 auto;
+      gap: 8px;
+    }
+  
+    .email-input {
+      padding: 12px 20px;
+      width: 70%;
+      border: 1px solid #d1d9d9;
+      border-radius: 25px;
+      font-size: 0.9rem;
+      background: white;
+      transition: all 0.3s ease;
+    }
+  
+    .email-input:focus {
+      outline: none;
+      border-color: #88a096;
+      box-shadow: 0 0 0 3px rgba(136, 160, 150, 0.2);
+    }
+  
+    .notify-btn {
+      padding: 12px 25px;
+      background: #88a096;
+      color: white;
+      border: none;
+      border-radius: 25px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      animation: pulseGlow 2s infinite;
+    }
+  
+    .notify-btn:hover {
+      background: #4d6b5f;
+      transform: translateY(-2px);
+      animation: pulseGlow 1s infinite;
+    }
+  
+    .notify-btn:focus {
+      outline: none;
+      background: #4d6b5f;
+      animation: pulseGlow 1s infinite;
+    }
+  
+    @media (max-width: 480px) {
+      .email-form {
+        flex-direction: column;
+      }
+      
+      .email-input,
+      .notify-btn {
+        width: 100%;
+      }
+    }
+  </style>
+  
+  <section class="coming-soon-section">
+    <div class="coming-soon-container">
+      <p class="subtitle">NEXT-LEVEL PERFORMANCE</p>
+      <h3 class="title">WARRIOR PRO - COMING SOON</h3>
+      <form class="email-form">
+        <input type="email" class="email-input" placeholder="Your email">
+        <button type="submit" class="notify-btn">
+          NOTIFY ME
+        </button>
+      </form>
+    </div>
+  </section>
+  
+  <script>
+    // Simple scroll animation trigger
+    document.addEventListener('DOMContentLoaded', function() {
+      const section = document.querySelector('.coming-soon-section');
+      
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.style.opacity = 1;
+          }
+        });
+      }, { threshold: 0.1 });
+      
+      observer.observe(section);
+    });
+  </script>
 
   <footer style="background-color: #000; color: white; text-align: center; padding: 2rem 0; position: relative; bottom: 0; width: 100%;">
     <style>
       /* Hover effect for social media links */
       footer a {
-        color: #fff;
+        color: #bbb;
         text-decoration: none;
         font-size: 1.2rem;
         transition: color 0.3s ease, transform 0.3s ease;
@@ -583,7 +705,7 @@
       footer p {
         margin: 0.5rem 0;
         font-size: 1rem;
-        color: #bbb;
+        color: #000;
       }
   
       footer p a:hover {
@@ -603,7 +725,30 @@
         transform: translateY(0);
       }
     </style>
-  
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const faders = document.querySelectorAll('.fade-in');
+
+    const appearOnScroll = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.1
+    });
+
+    faders.forEach(fadeEl => {
+      appearOnScroll.observe(fadeEl);
+    });
+  });
+</script>
+
+
     <div class="footer-fade-in">
       <p>© 2025 Warrior Kicks. All rights reserved.</p>
       <p>
