@@ -6,6 +6,7 @@
   <title>Warrior Kicks</title>
   <link rel="stylesheet" href="styles.css" />
   <link rel="stylesheet" href="gallery_model_styles.css">
+  <link rel="stylesheet" href="lacestyle.css" />
   <link rel="stylesheet" href="fade_in.css">
   <link rel="stylesheet" href="paralax.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -88,12 +89,21 @@
   <section class="sneaker-features-section">
 
     <h1 class="sneaker-features-headline">Warrior Sneaker <span class="accent">Pro</span> - dominate the streets in ultimate comfort</h1>
-    <img src="Images/gallery/purpleshoes2.jpg" alt="shoes">
-    
-    <p class="sneaker-features-subhead">Engineered for champions who refuse to settle.</p>
-      <img src="Images/gallery/pinkshoes2.jpg" alt="">
-      <p class="sneaker-features-subhead">The Warrior Sneaker Pro combines cutting-edge technology with bold street style to power through your toughest challenges.</p> <img src="Images/gallery/blueshoes.jpg" alt="">
+    <div class="pro1">
+      <img src="Images/gallery/pro1.png" alt="shoes">
+    <p  id="pro1"  class="sneaker-features-subhead">Engineered for champions who refuse to settle.</p>
+    </div>
 
+    <div class="pro2">
+      <p id="pro2" class="sneaker-features-subhead">The Warrior Sneaker Pro combines cutting-edge technology with bold street style</p>
+      <img src="Images/gallery/pro2.png" alt="">
+    </div>
+    
+    <div class="pro3">
+      <img src="Images/gallery/pro3.png" alt="">
+      <p  id="pro3" class="sneaker-features-subhead"> Power through your toughest challenges.</p>
+    </div>
+      
     <ul class="sneaker-features-list">
       <li class="sneaker-feature-item" data-checked="false">Showcase your style with premium materials</li>
       <li class="sneaker-feature-item" data-checked="true">Available now in limited edition colors</li>
@@ -165,6 +175,52 @@
         </div>
       </div>
     </div>
+  </section>
+
+  <section class="lace-up">
+    <button id="laceUpBtn" class="lace-up-button">Lace-Up</button>
+    <div class="lace-container">
+      <img src="Images/gallery/sneaker.PNG" alt="sneaker">
+      <svg viewBox="0 0 800 600">
+        <!-- Eyelets on left -->
+        <circle class="eyelet" cx="200" cy="150" r="6"/>
+        <circle class="eyelet" cx="200" cy="200" r="6"/>
+        <circle class="eyelet" cx="200" cy="250" r="6"/>
+        <circle class="eyelet" cx="200" cy="300" r="6"/>
+        <circle class="eyelet" cx="200" cy="350" r="6"/>
+        <circle class="eyelet" cx="200" cy="400" r="6"/>
+  
+        <!-- Eyelets on right -->
+        <circle class="eyelet" cx="350" cy="150" r="6"/>
+        <circle class="eyelet" cx="350" cy="200" r="6"/>
+        <circle class="eyelet" cx="350" cy="250" r="6"/>
+        <circle class="eyelet" cx="350" cy="300" r="6"/>
+        <circle class="eyelet" cx="350" cy="350" r="6"/>
+        <circle class="eyelet" cx="350" cy="400" r="6"/>
+  
+        <!-- Lace Path -->
+        <path class="lace-path" id="lacePath"
+          d="M200 150 
+             L350 200 
+             L200 250 
+             L350 300 
+             L200 350 
+             L350 400
+  
+             M350 150 
+             L200 200 
+             L350 250 
+             L200 300 
+             L350 350
+             L200 400"
+        />
+      </svg>
+    </div>
+    <script>
+      document.getElementById("laceUpBtn").addEventListener("click", function() {
+        document.getElementById("lacePath").classList.add("animate");
+      });
+    </script>
   </section>
 
   <section class="gallery-section fade-in-section">
