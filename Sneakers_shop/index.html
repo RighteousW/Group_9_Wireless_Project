@@ -6,6 +6,7 @@
   <title>Warrior Kicks</title>
   <link rel="stylesheet" href="styles.css" />
   <link rel="stylesheet" href="gallery_model_styles.css">
+  <link rel="stylesheet" href="paralax.css">
   <!-- <link rel="stylesheet" href="scroll_fade.css"> -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
@@ -64,13 +65,37 @@
     
     <p class="sneaker-features-subhead">Engineered for champions who refuse to settle.</p>
       <img src="Images/gallery/pinkshoes2.jpg" alt="">
-      <p>The Warrior Sneaker Pro combines cutting-edge technology with bold street style to power through your toughest challenges.</p> <img src="Images/gallery/blueshoes.jpg" alt="">
+      <p class="sneaker-features-subhead">The Warrior Sneaker Pro combines cutting-edge technology with bold street style to power through your toughest challenges.</p> <img src="Images/gallery/blueshoes.jpg" alt="">
 
     <ul class="sneaker-features-list">
       <li class="sneaker-feature-item" data-checked="false">Showcase your style with premium materials</li>
       <li class="sneaker-feature-item" data-checked="true">Available now in limited edition colors</li>
       <li class="sneaker-feature-item" data-checked="false">Global shipping with exclusive packaging</li>
     </ul>
+
+   <div class="paracontainer"> <div class="parallax">
+      <div class="pictures-para">
+        <img src="Images/gallery/backlaver1.jpg" class="backlayer">
+        <img src="Images/gallery/layer3shoes.png" class="layer3">
+        <img src="Images/gallery/layer4shoes.png" class="layer4">
+        <!-- <img src="Images/gallery/layer5shoes.png" class="layer5"> -->
+      </div>
+      <h1 class="para-title">Warrior Kicks</h1>
+     </div>
+    </div>
+    <script>
+      window.addEventListener('scroll', () => {
+        const scrollTop = window.pageYOffset;
+        
+        // Smoother and more visible earlier movement
+        document.querySelector('.backlayer').style.transform = `translateY(${scrollTop * 0.001}px)`;
+        document.querySelector('.layer3').style.transform = `translateY(${scrollTop * 0.05}px)`;
+        document.querySelector('.layer4').style.transform = `translateY(${scrollTop * 0.15}px)`;
+        // document.querySelector('.layer5').style.transform = `translateY(${scrollTop * 0.3}px)`;
+        document.querySelector('.para-title').style.transform = `translate(-50%, calc(-50% + ${scrollTop * 0.001}px))`;
+      });
+    </script>    
+    
   </section>
 
   <!-- Testimonials Section -->
