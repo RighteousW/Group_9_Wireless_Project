@@ -206,6 +206,35 @@
 
   <section class="warrior-cta-section" style="padding: 4rem 2rem; background-color: #fefefe; text-align: center; border-top: 1px solid #eaeaea;">
     <style>
+      /* Default state: elements are slightly transparent and shifted */
+    .hero-text,
+    .warrior-sneaker-section {
+      opacity: 0.7;
+      transform: translateY(30px);
+      transition: all 1s ease;
+    }
+
+    .hero-image {
+  margin-top: -260px; /* Moves the image 50px upwards */
+  transform: translateX(-30px);
+}
+
+    .hero-image img,
+    .warrior-sneaker-section .sneaker-image img {
+      opacity: 0.7;
+      transition: opacity 1s ease, transform 1s ease;
+      transform: translateY(30px);
+    }
+
+    /* Hover animation for the action button */
+    .action-button {
+      transition: transform 0.3s ease-in-out, background-color 0.3s ease;
+    }
+
+    .action-button:hover {
+      transform: scale(1.1);
+      background-color: #555; /* Change to a darker color on hover */
+    }
       @keyframes bounce {
         0%, 100% { transform: translateY(0); }
         50% { transform: translateY(-15px); }
@@ -422,6 +451,59 @@
     </div>
   
     <script>
+       // Detecting scroll position to trigger animations
+    window.addEventListener('scroll', function() {
+      const heroText = document.querySelector('.hero-text');
+      const warriorSection = document.querySelector('.warrior-sneaker-section');
+      const heroImage = document.querySelector('.hero-image img');
+      const sneakerImage = document.querySelector('.warrior-sneaker-section .sneaker-image img');
+      
+      // Check if the hero text is in the viewport
+      if (heroText.getBoundingClientRect().top < window.innerHeight) {
+        heroText.style.opacity = 1;
+        heroText.style.transform = 'translateY(0)';
+      }
+
+      // Check if the warrior sneaker section is in the viewport
+      if (warriorSection.getBoundingClientRect().top < window.innerHeight) {
+        warriorSection.style.opacity = 1;
+        warriorSection.style.transform = 'translateY(0)';
+      }
+
+      // Check if the hero image is in the viewport
+      if (heroImage.getBoundingClientRect().top < window.innerHeight) {
+        heroImage.style.opacity = 1;
+        heroImage.style.transform = 'translateY(0)';
+      }
+
+      // Check if the sneaker image is in the viewport
+      if (sneakerImage.getBoundingClientRect().top < window.innerHeight) {
+        sneakerImage.style.opacity = 1;
+        sneakerImage.style.transform = 'translateY(0)';
+      }
+    });
+
+    // Hover effect on the "Shop Now" button
+    const actionButton = document.querySelector('.action-button');
+    actionButton.addEventListener('mouseover', function() {
+      // Add hover animation
+      actionButton.style.transform = 'scale(1.1)';
+      actionButton.style.backgroundColor = '#555';
+    });
+
+    actionButton.addEventListener('mouseout', function() {
+      // Remove hover animation
+      actionButton.style.transform = 'scale(1)';
+      actionButton.style.backgroundColor = '';
+    });
+
+    // Click effect on the "Shop Now" button
+    actionButton.addEventListener('click', function() {
+      // Trigger animation or any action on button click
+      alert('Navigating to the shop...');
+      // You can redirect the user to a shop link, for example:
+      // window.location.href = 'https://yourshop.com';
+    });
       // Footer fade-in effect on scroll
       const footer = document.querySelector('.footer-fade-in');
       const footerObserver = new IntersectionObserver((entries, observer) => {
