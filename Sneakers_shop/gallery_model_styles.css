@@ -50,7 +50,7 @@
 /*Gallery*/
 .gallery-section {
     margin: auto;
-    background-color: rgba(231, 255, 255, 0.84);
+    background-color: var(--bg-color);
 }
 
 .gallery-section h2 {
@@ -60,12 +60,8 @@
 
 
 /* Customizer Section*/
-:root {
-    --customizer-bg-color: rgba(255, 250, 239, 0.84);
-}
-
 .model-customizer {
-    background-color: var(--customizer-bg-color);
+    background-color: #eaeaea;
     padding: 2rem;
     border-radius: 12px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
