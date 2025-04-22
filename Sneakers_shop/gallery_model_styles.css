@@ -51,6 +51,7 @@
 .gallery-section {
     margin: auto;
     background-color: var(--bg-color);
+    height: 100vh;
 }
 
 .gallery-section h2 {
@@ -94,17 +95,8 @@ model-viewer {
     flex: 0 0 20%;
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 1.5rem;
-}
-
-.model-material-select select {
-    width: 100%;
-    padding: 0.4rem;
-    border-radius: 6px;
-    border: 1px solid #ccc;
-    background-color: var(--bg-color);
-    color: #000000;
-    font-size: large;
 }
 
 .color-picker-container {

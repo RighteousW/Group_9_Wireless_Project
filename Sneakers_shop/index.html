@@ -8,11 +8,13 @@
   <link rel="stylesheet" href="gallery_model_styles.css">
   <link rel="stylesheet" href="fade_in.css">
   <link rel="stylesheet" href="paralax.css">
+  <link rel="stylesheet" href="dropdown.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
   <script type="module" src="sneaker_model_color_picker.js"></script>
   <script type="module" src="fade_in.js"></script>
   <script type="module" src="slider.js"></script>
+  <script type="module" src="dropdown.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700&display=swap" rel="stylesheet">
 
 </head>
@@ -30,7 +32,8 @@
   <div class="hero-text">
     <h1 class="headline">Warrior Sneaker</h1>
     <h2 class="subheadline">Conquer the streets in legendary style</h2>
-    <p class="description">Designed for performance and built to last, Warrior Sneaker is the ultimate fusion of comfort, power, and bold aesthetics.</p>
+    <p class="description">Designed for performance and built to last, Warrior Sneaker is the ultimate fusion of
+      comfort, power, and bold aesthetics.</p>
     <div class="action-group">
       <button class="action-button">Shop Now</button>
       <p class="social-proof">5,000 sneakerheads already made the switch!</p>
@@ -43,7 +46,9 @@
     <div class="sneaker-content">
       <div class="sneaker-text">
         <h2>Unleash Your Inner Warrior with Every Step</h2>
-        <p>The Warrior Sneaker is engineered for those who walk with purpose. Designed with advanced cushioning, premium materials, and bold style, this sneaker transforms your everyday stride into a statement of strength and resilience.</p>
+        <p>The Warrior Sneaker is engineered for those who walk with purpose. Designed with advanced cushioning, premium
+          materials, and bold style, this sneaker transforms your everyday stride into a statement of strength and
+          resilience.</p>
         <ul>
           <li>High-performance sole for superior grip and comfort</li>
           <li>Breathable mesh upper to keep your feet cool</li>
@@ -60,12 +65,14 @@
   <!-- New section added here -->
   <section class="sneaker-features-section">
 
-    <h1 class="sneaker-features-headline">Warrior Sneaker <span class="accent">Pro</span> - dominate the streets in ultimate comfort</h1>
+    <h1 class="sneaker-features-headline">Warrior Sneaker <span class="accent">Pro</span> - dominate the streets in
+      ultimate comfort</h1>
     <img src="Images/gallery/purpleshoes2.jpg" alt="shoes">
-    
+
     <p class="sneaker-features-subhead">Engineered for champions who refuse to settle.</p>
-      <img src="Images/gallery/pinkshoes2.jpg" alt="">
-      <p class="sneaker-features-subhead">The Warrior Sneaker Pro combines cutting-edge technology with bold street style to power through your toughest challenges.</p> <img src="Images/gallery/blueshoes.jpg" alt="">
+    <img src="Images/gallery/pinkshoes2.jpg" alt="">
+    <p class="sneaker-features-subhead">The Warrior Sneaker Pro combines cutting-edge technology with bold street style
+      to power through your toughest challenges.</p> <img src="Images/gallery/blueshoes.jpg" alt="">
 
     <ul class="sneaker-features-list">
       <li class="sneaker-feature-item" data-checked="false">Showcase your style with premium materials</li>
@@ -73,20 +80,21 @@
       <li class="sneaker-feature-item" data-checked="false">Global shipping with exclusive packaging</li>
     </ul>
 
-   <div class="paracontainer"> <div class="parallax">
-      <div class="pictures-para">
-        <img src="Images/gallery/backlaver1.jpg" class="backlayer">
-        <img src="Images/gallery/layer3shoes.png" class="layer3">
-        <img src="Images/gallery/layer4shoes.png" class="layer4">
-        <!-- <img src="Images/gallery/layer5shoes.png" class="layer5"> -->
+    <div class="paracontainer">
+      <div class="parallax">
+        <div class="pictures-para">
+          <img src="Images/gallery/backlaver1.jpg" class="backlayer">
+          <img src="Images/gallery/layer3shoes.png" class="layer3">
+          <img src="Images/gallery/layer4shoes.png" class="layer4">
+          <!-- <img src="Images/gallery/layer5shoes.png" class="layer5"> -->
+        </div>
+        <h1 class="para-title">Warrior Kicks</h1>
       </div>
-      <h1 class="para-title">Warrior Kicks</h1>
-     </div>
     </div>
     <script>
       window.addEventListener('scroll', () => {
         const scrollTop = window.pageYOffset;
-        
+
         // Smoother and more visible earlier movement
         document.querySelector('.backlayer').style.transform = `translateY(${scrollTop * 0.001}px)`;
         document.querySelector('.layer3').style.transform = `translateY(${scrollTop * 0.05}px)`;
@@ -94,8 +102,8 @@
         // document.querySelector('.layer5').style.transform = `translateY(${scrollTop * 0.3}px)`;
         document.querySelector('.para-title').style.transform = `translate(-50%, calc(-50% + ${scrollTop * 0.001}px))`;
       });
-    </script>    
-    
+    </script>
+
   </section>
 
   <!-- Testimonials Section -->
@@ -151,7 +159,7 @@
         <div class="item"><img src="Images/gallery/img6.webp" alt="Image 6"></div>
         <div class="item"><img src="Images/gallery/img7.webp" alt="Image 7"></div>
         <div class="item"><img src="Images/gallery/img8.webp" alt="Image 8"></div>
-  
+
         <!-- Duplicate list for seamless scroll -->
         <div class="item"><img src="Images/gallery/img2.webp" alt="Image 2"></div>
         <div class="item"><img src="Images/gallery/img3.webp" alt="Image 3"></div>
@@ -169,17 +177,19 @@
 
     <div class="model-body">
       <model-viewer id="warriorModel" src="Images/warrior_sneaker_with_sole.glb" alt="3D Warrior Sneaker" auto-rotate
-        camera-controls ar shadow-intensity="1" 
-        loading="eager">
+        camera-controls ar shadow-intensity="1" loading="eager">
       </model-viewer>
 
       <div class="model-sidebar">
         <div class="model-material-select">
-          <select id="materialSelect">
-            <option value="Purpleshoe">Upper shoe</option>
-            <option value="LacesFlatMaterial">Laces</option>
-            <option value="Sole">Sole</option>
-          </select>
+          <div class="dropdown-container">
+            <div class="selected-option" id="selectedOption">Upper Shoe</div>
+            <ul class="dropdown-options" id="dropdownOptions">
+              <li data-value="Purpleshoe">Upper Shoe</li>
+              <li data-value="LacesFlatMaterial">Laces</li>
+              <li data-value="Sole">Sole</li>
+            </ul>
+          </div>
         </div>
         <div class="color-picker-container">
           <canvas id="color-wheel" width="200" height="200"></canvas>
@@ -230,51 +240,65 @@
     </div>
   </section>
 
-  <section class="warrior-cta-section" style="padding: 4rem 2rem; background-color: #fefefe; text-align: center; border-top: 1px solid #eaeaea;">
+  <section class="warrior-cta-section"
+    style="padding: 4rem 2rem; background-color: #fefefe; text-align: center; border-top: 1px solid #eaeaea;">
     <style>
       /* Default state: elements are slightly transparent and shifted */
-    .hero-text,
-    .warrior-sneaker-section {
-      opacity: 0.7;
-      transform: translateY(30px);
-      transition: all 1s ease;
-    }
-
-    .hero-image {
-  margin-top: -260px; /* Moves the image 50px upwards */
-  transform: translateX(-30px);
-}
-
-    .hero-image img,
-    .warrior-sneaker-section .sneaker-image img {
-      opacity: 0.7;
-      transition: opacity 1s ease, transform 1s ease;
-      transform: translateY(30px);
-    }
-
-    /* Hover animation for the action button */
-    .action-button {
-      transition: transform 0.3s ease-in-out, background-color 0.3s ease;
-    }
-
-    .action-button:hover {
-      transform: scale(1.1);
-      background-color: #555; /* Change to a darker color on hover */
-    }
-      @keyframes bounce {
-        0%, 100% { transform: translateY(0); }
-        50% { transform: translateY(-15px); }
+      .hero-text,
+      .warrior-sneaker-section {
+        opacity: 0.7;
+        transform: translateY(30px);
+        transition: all 1s ease;
       }
-  
+
+      .hero-image {
+        margin-top: -260px;
+        /* Moves the image 50px upwards */
+        transform: translateX(-30px);
+      }
+
+      .hero-image img,
+      .warrior-sneaker-section .sneaker-image img {
+        opacity: 0.7;
+        transition: opacity 1s ease, transform 1s ease;
+        transform: translateY(30px);
+      }
+
+      /* Hover animation for the action button */
+      .action-button {
+        transition: transform 0.3s ease-in-out, background-color 0.3s ease;
+      }
+
+      .action-button:hover {
+        transform: scale(1.1);
+        background-color: #555;
+        /* Change to a darker color on hover */
+      }
+
+      @keyframes bounce {
+
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+
+        50% {
+          transform: translateY(-15px);
+        }
+      }
+
       @keyframes glowPulse {
-        0%, 100% {
+
+        0%,
+        100% {
           box-shadow: 0 0 12px #66ffcc, 0 0 24px #66ffcc;
         }
+
         50% {
           box-shadow: 0 0 24px #00ff99, 0 0 48px #00ff99;
         }
       }
-  
+
       .bouncing-heading {
         font-size: 2.5rem;
         color: #2b4c38;
@@ -283,26 +307,26 @@
         font-weight: bold;
         letter-spacing: 2px;
       }
-  
+
       .glow-button:hover {
         animation: glowPulse 1.8s infinite;
       }
-  
+
       .glowing-box {
         animation: glowPulse 2s infinite;
       }
-  
+
       .fade-in {
         opacity: 0;
         transform: translateY(30px);
         transition: all 0.8s ease-in-out;
       }
-  
+
       .fade-in.visible {
         opacity: 1;
         transform: translateY(0);
       }
-  
+
       /* Popup styling */
       .popup {
         position: fixed;
@@ -311,28 +335,28 @@
         width: 100%;
         height: 100%;
         display: none;
-        background: rgba(0,0,0,0.5);
+        background: rgba(0, 0, 0, 0.5);
         align-items: center;
         justify-content: center;
         z-index: 9999;
       }
-  
+
       .popup-content {
         background: white;
         padding: 2rem;
         border-radius: 10px;
         max-width: 400px;
         width: 90%;
-        box-shadow: 0 0 20px rgba(0,0,0,0.2);
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
         text-align: left;
       }
-  
+
       .popup-content h3 {
         margin-top: 0;
         font-size: 1.3rem;
         color: #2b4c38;
       }
-  
+
       .popup-content input,
       .popup-content button {
         width: 100%;
@@ -341,44 +365,47 @@
         border-radius: 8px;
         font-size: 1rem;
       }
-  
+
       .popup-content input {
         border: 1px solid #ccc;
       }
-  
+
       .popup-content button {
         background-color: #2b4c38;
         color: white;
         border: none;
         cursor: pointer;
       }
-  
+
       .popup-content .close-btn {
         background: #ddd;
         color: #333;
       }
     </style>
-  
+
     <div style="max-width: 800px; margin: 0 auto;">
       <h2 class="bouncing-heading">ELEVATE YOUR GAME</h2>
-  
+
       <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 1.5rem; margin: 2rem 0;">
-        <div class="fade-in glowing-box" style="flex: 1; min-width: 250px; padding: 1.5rem; background: #f4f8f5; border-radius: 8px; box-shadow: 0 2px 12px rgba(0,0,0,0.08);">
+        <div class="fade-in glowing-box"
+          style="flex: 1; min-width: 250px; padding: 1.5rem; background: #f4f8f5; border-radius: 8px; box-shadow: 0 2px 12px rgba(0,0,0,0.08);">
           <h3 style="margin: 0 0 1rem 0; font-size: 1.1rem; color: #2a2a2a;">BATTLE-PROVEN</h3>
           <p style="margin: 0; color: #444; font-size: 0.95rem;">Tested by athletes on all surfaces</p>
         </div>
-  
-        <div class="fade-in glowing-box" style="flex: 1; min-width: 250px; padding: 1.5rem; background: #f4f8f5; border-radius: 8px; box-shadow: 0 2px 12px rgba(0,0,0,0.08);">
+
+        <div class="fade-in glowing-box"
+          style="flex: 1; min-width: 250px; padding: 1.5rem; background: #f4f8f5; border-radius: 8px; box-shadow: 0 2px 12px rgba(0,0,0,0.08);">
           <h3 style="margin: 0 0 1rem 0; font-size: 1.1rem; color: #2a2a2a;">COMMUNITY APPROVED</h3>
           <p style="margin: 0; color: #444; font-size: 0.95rem;">5,000+ warriors can't be wrong</p>
         </div>
       </div>
-  
-      <button class="action-button glow-button fade-in" onclick="document.getElementById('popup').style.display='flex'" style="margin-top: 1.5rem; padding: 12px 30px; background: #2b4c38; color: white; border: none; border-radius: 25px; font-weight: 600; text-decoration: none; display: inline-block;">
+
+      <button class="action-button glow-button fade-in" onclick="document.getElementById('popup').style.display='flex'"
+        style="margin-top: 1.5rem; padding: 12px 30px; background: #2b4c38; color: white; border: none; border-radius: 25px; font-weight: 600; text-decoration: none; display: inline-block;">
         JOIN THE MOVEMENT →
       </button>
     </div>
-  
+
     <!-- Registration Popup -->
     <div class="popup" id="popup">
       <div class="popup-content">
@@ -390,14 +417,14 @@
         <button class="close-btn" onclick="document.getElementById('popup').style.display='none'">Close</button>
       </div>
     </div>
-  
+
     <script>
       const faders = document.querySelectorAll('.fade-in');
       const appearOptions = {
         threshold: 0.3,
         rootMargin: '0px 0px -50px 0px'
       };
-  
+
       const appearOnScroll = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
           if (!entry.isIntersecting) return;
@@ -405,17 +432,17 @@
           observer.unobserve(entry.target);
         });
       }, appearOptions);
-  
+
       faders.forEach(fader => {
         appearOnScroll.observe(fader);
       });
-  
+
       // Registration form functionality
       function registerUser() {
         const name = document.getElementById('fullName').value;
         const email = document.getElementById('email').value;
         const password = document.getElementById('password').value;
-  
+
         if (name && email && password) {
           alert('Registration Successful! Welcome ' + name);
           // Here you would normally send the data to the backend (e.g., with an AJAX request).
@@ -427,7 +454,8 @@
     </script>
   </section>
 
-  <footer style="background-color: #000; color: white; text-align: center; padding: 2rem 0; position: relative; bottom: 0; width: 100%;">
+  <footer
+    style="background-color: #000; color: white; text-align: center; padding: 2rem 0; position: relative; bottom: 0; width: 100%;">
     <style>
       /* Hover effect for social media links */
       footer a {
@@ -436,37 +464,37 @@
         font-size: 1.2rem;
         transition: color 0.3s ease, transform 0.3s ease;
       }
-  
+
       footer a:hover {
         color: #66ffcc;
         transform: scale(1.1);
       }
-  
+
       /* Glowing footer text effect */
       footer p {
         margin: 0.5rem 0;
         font-size: 1rem;
         color: #bbb;
       }
-  
+
       footer p a:hover {
         text-decoration: underline;
         color: #66ffcc;
       }
-  
+
       /* Fade-in effect when footer appears on scroll */
       .footer-fade-in {
         opacity: 0;
         transform: translateY(30px);
         transition: all 1s ease-in-out;
       }
-  
+
       .footer-fade-in.visible {
         opacity: 1;
         transform: translateY(0);
       }
     </style>
-  
+
     <div class="footer-fade-in">
       <p>© 2025 Warrior Kicks. All rights reserved.</p>
       <p>
@@ -475,61 +503,61 @@
         <a href="#">YouTube</a>
       </p>
     </div>
-  
+
     <script>
-       // Detecting scroll position to trigger animations
-    window.addEventListener('scroll', function() {
-      const heroText = document.querySelector('.hero-text');
-      const warriorSection = document.querySelector('.warrior-sneaker-section');
-      const heroImage = document.querySelector('.hero-image img');
-      const sneakerImage = document.querySelector('.warrior-sneaker-section .sneaker-image img');
-      
-      // Check if the hero text is in the viewport
-      if (heroText.getBoundingClientRect().top < window.innerHeight) {
-        heroText.style.opacity = 1;
-        heroText.style.transform = 'translateY(0)';
-      }
+      // Detecting scroll position to trigger animations
+      window.addEventListener('scroll', function () {
+        const heroText = document.querySelector('.hero-text');
+        const warriorSection = document.querySelector('.warrior-sneaker-section');
+        const heroImage = document.querySelector('.hero-image img');
+        const sneakerImage = document.querySelector('.warrior-sneaker-section .sneaker-image img');
 
-      // Check if the warrior sneaker section is in the viewport
-      if (warriorSection.getBoundingClientRect().top < window.innerHeight) {
-        warriorSection.style.opacity = 1;
-        warriorSection.style.transform = 'translateY(0)';
-      }
+        // Check if the hero text is in the viewport
+        if (heroText.getBoundingClientRect().top < window.innerHeight) {
+          heroText.style.opacity = 1;
+          heroText.style.transform = 'translateY(0)';
+        }
 
-      // Check if the hero image is in the viewport
-      if (heroImage.getBoundingClientRect().top < window.innerHeight) {
-        heroImage.style.opacity = 1;
-        heroImage.style.transform = 'translateY(0)';
-      }
+        // Check if the warrior sneaker section is in the viewport
+        if (warriorSection.getBoundingClientRect().top < window.innerHeight) {
+          warriorSection.style.opacity = 1;
+          warriorSection.style.transform = 'translateY(0)';
+        }
 
-      // Check if the sneaker image is in the viewport
-      if (sneakerImage.getBoundingClientRect().top < window.innerHeight) {
-        sneakerImage.style.opacity = 1;
-        sneakerImage.style.transform = 'translateY(0)';
-      }
-    });
+        // Check if the hero image is in the viewport
+        if (heroImage.getBoundingClientRect().top < window.innerHeight) {
+          heroImage.style.opacity = 1;
+          heroImage.style.transform = 'translateY(0)';
+        }
 
-    // Hover effect on the "Shop Now" button
-    const actionButton = document.querySelector('.action-button');
-    actionButton.addEventListener('mouseover', function() {
-      // Add hover animation
-      actionButton.style.transform = 'scale(1.1)';
-      actionButton.style.backgroundColor = '#555';
-    });
+        // Check if the sneaker image is in the viewport
+        if (sneakerImage.getBoundingClientRect().top < window.innerHeight) {
+          sneakerImage.style.opacity = 1;
+          sneakerImage.style.transform = 'translateY(0)';
+        }
+      });
 
-    actionButton.addEventListener('mouseout', function() {
-      // Remove hover animation
-      actionButton.style.transform = 'scale(1)';
-      actionButton.style.backgroundColor = '';
-    });
+      // Hover effect on the "Shop Now" button
+      const actionButton = document.querySelector('.action-button');
+      actionButton.addEventListener('mouseover', function () {
+        // Add hover animation
+        actionButton.style.transform = 'scale(1.1)';
+        actionButton.style.backgroundColor = '#555';
+      });
 
-    // Click effect on the "Shop Now" button
-    actionButton.addEventListener('click', function() {
-      // Trigger animation or any action on button click
-      alert('Navigating to the shop...');
-      // You can redirect the user to a shop link, for example:
-      // window.location.href = 'https://yourshop.com';
-    });
+      actionButton.addEventListener('mouseout', function () {
+        // Remove hover animation
+        actionButton.style.transform = 'scale(1)';
+        actionButton.style.backgroundColor = '';
+      });
+
+      // Click effect on the "Shop Now" button
+      actionButton.addEventListener('click', function () {
+        // Trigger animation or any action on button click
+        alert('Navigating to the shop...');
+        // You can redirect the user to a shop link, for example:
+        // window.location.href = 'https://yourshop.com';
+      });
       // Footer fade-in effect on scroll
       const footer = document.querySelector('.footer-fade-in');
       const footerObserver = new IntersectionObserver((entries, observer) => {
@@ -542,9 +570,9 @@
       }, {
         threshold: 0.1,
       });
-  
+
       footerObserver.observe(footer);
     </script>
   </footer>
-  
+
 </html>

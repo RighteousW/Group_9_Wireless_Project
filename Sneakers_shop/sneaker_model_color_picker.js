@@ -4,12 +4,19 @@ const current_color_view = document.getElementById('output');
 const alphaSlider = document.getElementById('alpha-slider');
 
 const modelViewer = document.getElementById('warriorModel');
-const materialSelect = document.getElementById('materialSelect');
+
+const selectedMaterialOption = document.getElementById('selectedOption');
+const materialOptions = document.getElementById('dropdownOptions');
 
 let activeMaterial = 'Purpleshoe';
-
-materialSelect.addEventListener('change', () => {
-    activeMaterial = materialSelect.value;
+document.querySelectorAll('#dropdownOptions li').forEach(item => {
+    item.addEventListener('click', () => {
+        const newMaterial = item.dataset.value;
+        activeMaterial = newMaterial;
+        selectedMaterialOption.textContent = item.textContent;
+        selectedMaterialOption.dataset.value = newMaterial;
+        console.log("Selected material:", activeMaterial);
+    });
 });
 
 function setMaterialColor(materialName, colorRGBA) {
@@ -21,7 +28,6 @@ function setMaterialColor(materialName, colorRGBA) {
 
     material.pbrMetallicRoughness.setBaseColorFactor(colorRGBA);
 }
-
 
 const drawColorWheel = () => {
     const radius = color_wheel.width / 2;
