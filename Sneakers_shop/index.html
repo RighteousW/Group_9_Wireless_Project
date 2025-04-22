@@ -19,12 +19,38 @@
 
 <body>
   <header>
-    <h1>Warrior Kicks</h1>
-    <nav>
-      <a href="#">Home</a>
-      <a href="#">Customize</a>
-      <a href="#">Shop</a>
-    </nav>
+    <div class="header-content">
+      <h1>Warrior Kicks</h1>
+      <nav>
+        <a href="#">Home</a>
+        <a href="#">Customize</a>
+        <a href="#">Shop</a>
+      </nav>
+    </div>
+    
+    <!-- Walking animation - positioned absolutely so it doesn't affect layout -->
+    <div class="walking-person">
+      <svg class="person-svg" width="40" height="40" viewBox="0 0 24 24">
+        <!-- Head -->
+        <circle cx="12" cy="8" r="3.5" fill="#333"/>
+        <!-- Body -->
+        <line x1="12" y1="11.5" x2="12" y2="17" stroke="#333" stroke-width="2"/>
+        <!-- Arms (animated) -->
+        <line class="arm-left" x1="12" y1="13" x2="8" y2="15" stroke="#333" stroke-width="2"/>
+        <line class="arm-right" x1="12" y1="13" x2="16" y2="15" stroke="#333" stroke-width="2"/>
+        <!-- Legs (animated) with shoes -->
+        <g class="leg-left">
+          <line x1="12" y1="17" x2="10" y2="21" stroke="#333" stroke-width="2"/>
+          <!-- Shoe -->
+          <path d="M8 21 L12 21 L13 20 Q13.5 19.5 12 19 L10 20 Z" fill="#ff5252" stroke="#333" stroke-width="1"/>
+        </g>
+        <g class="leg-right">
+          <line x1="12" y1="17" x2="14" y2="21" stroke="#333" stroke-width="2"/>
+          <!-- Shoe -->
+          <path d="M14 21 L18 21 L17 20 Q16.5 19.5 18 19 L16 20 Z" fill="#ff5252" stroke="#333" stroke-width="1"/>
+        </g>
+      </svg>
+    </div>
   </header>
 
   <div class="hero-text slide-in-left">
@@ -408,6 +434,66 @@
   animation: flyInRight 1.2s ease-out forwards;
 }
 
+ /* Existing header styles - preserved */
+ header {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  }
+  
+  .header-content {
+    color: #000;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  nav a{
+    color: #000;
+  }
+
+  /* Walking animation styles - added */
+  .walking-person {
+    position: absolute;
+    left: 120px; /* Start near "Warrior" */
+    top: 50%;
+    transform: translateY(-50%);
+    animation: walkAcross 8s infinite ease-in-out;
+    pointer-events: none; /* Allows clicking through to nav items */
+    z-index: 1;
+  }
+
+  /* Arm and leg animations */
+  .arm-left, .leg-left {
+    animation: swingLeft 0.8s infinite alternate ease-in-out;
+    transform-origin: top center;
+  }
+  .arm-right, .leg-right {
+    animation: swingRight 0.8s infinite alternate ease-in-out;
+    transform-origin: top center;
+  }
+
+  @keyframes walkAcross {
+    0% { left: 120px; opacity: 0; }
+    10% { opacity: 1; }
+    90% { opacity: 1; }
+    100% { left: calc(100% - 180px); opacity: 0; }
+  }
+
+  @keyframes swingLeft {
+    0% { transform: rotate(-20deg); }
+    100% { transform: rotate(20deg); }
+  }
+
+  @keyframes swingRight {
+    0% { transform: rotate(20deg); }
+    100% { transform: rotate(-20deg); }
+  }
     </style>
   
     <div style="max-width: 800px; margin: 0 auto;">
