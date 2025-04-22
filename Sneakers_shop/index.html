@@ -6,12 +6,12 @@
   <title>Warrior Kicks</title>
   <link rel="stylesheet" href="styles.css" />
   <link rel="stylesheet" href="gallery_model_styles.css">
+  <link rel="stylesheet" href="fade_in.css">
   <link rel="stylesheet" href="paralax.css">
-  <!-- <link rel="stylesheet" href="scroll_fade.css"> -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
   <script type="module" src="sneaker_model_color_picker.js"></script>
-  <!-- <script type="module" src="scroll_fade.js"></script> -->
+  <script type="module" src="fade_in.js"></script>
   <script type="module" src="slider.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700&display=swap" rel="stylesheet">
 
@@ -140,7 +140,7 @@
     </div>
   </section>
 
-  <section class="gallery-section">
+  <section class="gallery-section fade-in-section">
     <h2 style="font-size: 2rem; margin-bottom: 2rem; color: var(--primary-color);">Warrior Favorites</h2>
     <div class="slider">
       <div class="list">
@@ -164,12 +164,13 @@
     </div>
   </section>
 
-  <section class="model-customizer">
+  <section class="model-customizer fade-in-section">
     <h1>Customize Your Warrior</h1>
 
     <div class="model-body">
       <model-viewer id="warriorModel" src="Images/warrior_sneaker_with_sole.glb" alt="3D Warrior Sneaker" auto-rotate
-        camera-controls ar shadow-intensity="1">
+        camera-controls ar shadow-intensity="1" 
+        loading="eager">
       </model-viewer>
 
       <div class="model-sidebar">
