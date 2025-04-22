@@ -27,35 +27,36 @@
     </nav>
   </header>
 
-  <div class="hero-text">
+  <div class="hero-text slide-in-left">
     <h1 class="headline">Warrior Sneaker</h1>
     <h2 class="subheadline">Conquer the streets in legendary style</h2>
-    <p class="description">Designed for performance and built to last, Warrior Sneaker is the ultimate fusion of comfort, power, and bold aesthetics.</p>
+    <p class="description">Designed for performance and built to last...</p>
     <div class="action-group">
-      <button class="action-button">Shop Now</button>
+      <button class="action-button glow-button">Shop Now</button>
       <p class="social-proof">5,000 sneakerheads already made the switch!</p>
     </div>
   </div>
-  <div class="hero-image">
+  
+  <div class="hero-image slide-in-right">
     <img src="Images/il_794xN.5711605874_lw5k.avif" alt="Warrior Sneaker Design" />
   </div>
+  
   <section class="warrior-sneaker-section">
     <div class="sneaker-content">
-      <div class="sneaker-text">
+      <div class="sneaker-text slide-in-left">
         <h2>Unleash Your Inner Warrior with Every Step</h2>
-        <p>The Warrior Sneaker is engineered for those who walk with purpose. Designed with advanced cushioning, premium materials, and bold style, this sneaker transforms your everyday stride into a statement of strength and resilience.</p>
+        <p>The Warrior Sneaker is engineered for those who walk with purpose...</p>
         <ul>
           <li>High-performance sole for superior grip and comfort</li>
-          <li>Breathable mesh upper to keep your feet cool</li>
-          <li>Modern aesthetic that turns heads</li>
-          <li>Built for both city streets and off-road paths</li>
+          <li>Breathable mesh upper...</li>
         </ul>
       </div>
-      <div class="sneaker-image">
+      <div class="sneaker-image slide-in-right">
         <img src="Images/il_794xN.6638895871_k2fl.avif" alt="Warrior Sneaker">
       </div>
     </div>
   </section>
+  
 
   <!-- New section added here -->
   <section class="sneaker-features-section">
@@ -241,7 +242,7 @@
     }
 
     .hero-image {
-  margin-top: -260px; /* Moves the image 50px upwards */
+  margin-top: -220px; /* Moves the image 50px upwards */
   transform: translateX(-30px);
 }
 
@@ -357,6 +358,56 @@
         background: #ddd;
         color: #333;
       }
+
+      /* Fly-in from left */
+@keyframes flyInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-150px) scale(0.8);
+  }
+  60% {
+    opacity: 1;
+    transform: translateX(20px) scale(1.05);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
+
+/* Fly-in from right */
+@keyframes flyInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(150px) scale(0.8);
+  }
+  60% {
+    opacity: 1;
+    transform: translateX(-20px) scale(1.05);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
+
+/* Default hidden state */
+.hero-text,
+.sneaker-text,
+.hero-image img,
+.sneaker-image img {
+  opacity: 0;
+}
+
+/* Trigger classes */
+.fly-in-left {
+  animation: flyInLeft 1.2s ease-out forwards;
+}
+
+.fly-in-right {
+  animation: flyInRight 1.2s ease-out forwards;
+}
+
     </style>
   
     <div style="max-width: 800px; margin: 0 auto;">
@@ -477,6 +528,22 @@
     </div>
   
     <script>
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        if (entry.target.classList.contains('hero-text') || entry.target.classList.contains('sneaker-text')) {
+          entry.target.classList.add('fly-in-left');
+        } else if (entry.target.querySelector('img')) {
+          entry.target.querySelector('img').classList.add('fly-in-right');
+        }
+        observer.unobserve(entry.target); // Optional: only animate once
+      }
+    });
+  }, { threshold: 0.3 });
+
+  document.querySelectorAll('.hero-text, .sneaker-text, .hero-image, .sneaker-image').forEach(el => observer.observe(el));
+
        // Detecting scroll position to trigger animations
     window.addEventListener('scroll', function() {
       const heroText = document.querySelector('.hero-text');
