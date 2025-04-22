@@ -1,0 +1,130 @@
+/*Image Infinite Slider*/
+.slider {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.slider:hover .item {
+    filter: grayscale(1);
+}
+
+.slider.paused .list {
+    animation-play-state: paused !important;
+}
+
+.slider .list {
+    display: flex;
+    width: max-content;
+    animation: scrollLeft 20s linear infinite;
+}
+
+.slider .item {
+    flex: 0 0 auto;
+    padding: 10px;
+}
+
+.slider .item:hover {
+    filter: grayscale(0);
+}
+
+.slider .item img {
+    max-height: 600px;
+    height: auto;
+    width: auto;
+    object-fit: contain;
+    display: block;
+    border-radius: 10px;
+}
+
+@keyframes scrollLeft {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/*Gallery*/
+.gallery-section {
+    margin: auto;
+    background-color: var(--bg-color);
+}
+
+.gallery-section h2 {
+    text-align: center;
+    padding: 5px;
+}
+
+
+/* Customizer Section*/
+.model-customizer {
+    background-color: #eaeaea;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.model-customizer h1 {
+    text-align: center;
+    font-size: 2rem;
+    color: #333;
+}
+
+.model-body {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+model-viewer {
+    flex: 0 0 80%;
+    height: 500px;
+    border-radius: 12px;
+    background-color: var(--customizer-bg-color);
+}
+
+.model-sidebar {
+    height: 500px;
+    flex: 0 0 20%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.model-material-select select {
+    width: 100%;
+    padding: 0.4rem;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    background-color: var(--bg-color);
+    color: #000000;
+    font-size: large;
+}
+
+.color-picker-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    width: 220px;
+    margin: 20px auto;
+    font-family: sans-serif;
+}
+
+canvas {
+    cursor: crosshair;
+    border-radius: 50%;
+}
+
+#output {
+    width: 100%;
+    height: 40px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}

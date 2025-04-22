@@ -1,0 +1,59 @@
+.paracontainer {
+    position: relative;
+    height: 100vh;
+    /* min-height: 200vh;  */
+    overflow-x: hidden;
+    background: #111;
+    perspective: 1000px;
+    font-family: 'Arial', sans-serif;
+
+  }
+  
+  .parallax {
+    margin-top: 0;
+    height: 100vh;
+    width: 100%;
+    transform-style: preserve-3d;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .pictures-para {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .pictures-para img {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    top: 0;
+    left: 0;
+    /* object-fit: cover; */
+    transform-style: preserve-3d;
+    pointer-events: none;
+    opacity: 1;
+    transition: transform 0.3s ease-out;
+  }
+  
+  /* Layer stacking */
+  .backlayer {
+     z-index: 1; }
+  .layer3 { z-index: 2; }
+  .layer4 { z-index: 3; }
+  .layer5 { z-index: 4; }
+  
+  .para-title {
+    position: absolute;
+    top: 5%; 
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 5;
+    font-size: 4rem;
+    color: white;
+    font-weight: bold;
+    text-shadow: 2px 2px 20px rgba(0,0,0,0.6);
+    transition: transform 0.4s ease;
+  }
+  
