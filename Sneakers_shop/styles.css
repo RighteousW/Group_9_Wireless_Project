@@ -309,12 +309,12 @@ footer a {
   animation-range: enrty 0;
 }
 
-/* @keyframes pro1animate{
+ @keyframes pro1animate{
   from{
       opacity:0;
-      transform: translate();
+      
   }
   to{
-
+    opacity :1;
   }
-} */
+} 
