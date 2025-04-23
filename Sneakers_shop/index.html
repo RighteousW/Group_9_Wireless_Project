@@ -248,7 +248,7 @@
     </div>
   </section>
 
-  <section class="model-customizer fade-in-section">
+  <section class="model-customizer fade-in-section" id="Model-Customizer">
     <h1>Customize Your Warrior</h1>
 
     <div class="model-body">
@@ -1145,10 +1145,7 @@
 
     // Click effect on the "Shop Now" button
     actionButton.addEventListener('click', function() {
-      // Trigger animation or any action on button click
-      alert('Navigating to the shop...');
-      // You can redirect the user to a shop link, for example:
-      // window.location.href = 'https://yourshop.com';
+      window.location.href = '#Model-Customizer';
     });
       // Footer fade-in effect on scroll
       const footer = document.querySelector('.footer-fade-in');
