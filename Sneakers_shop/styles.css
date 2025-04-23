@@ -281,3 +281,40 @@ footer a {
     transform: translateX(0px);
   }
 }
+
+.pro1,.pro2,.pro3{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.sneaker-features-section p{
+  font-size: 40px;
+  font-weight: bold;
+  
+}
+#pro1 {
+ color: rgb(65, 10, 52);
+}
+#pro2{
+   color: rgb(202, 50, 75);
+}
+#pro3{
+  color: rgb(63, 157, 245);
+}
+
+.pro1{
+  animation: pro1animate linear;
+  animation-timeline: view();
+  animation-range: enrty 0;
+}
+
+/* @keyframes pro1animate{
+  from{
+      opacity:0;
+      transform: translate();
+  }
+  to{
+
+  }
+} */
