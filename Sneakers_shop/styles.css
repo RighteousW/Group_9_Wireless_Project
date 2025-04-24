@@ -303,18 +303,61 @@ footer a {
   color: rgb(63, 157, 245);
 }
 
-.pro1{
+#p1{
   animation: pro1animate linear;
   animation-timeline: view();
-  animation-range: enrty 0;
+  animation-range: 40% 70%;
 }
 
  @keyframes pro1animate{
   from{
-      opacity:0;
-      
+      opacity:1;
+       
   }
   to{
-    opacity :1;
+    transform:translate(800px,300px);
+    opacity :0;
   }
 } 
+
+#p2{
+  animation-name: pro2animate2,pro2animate;
+  animation-timing-function:  linear, linear;
+  animation-timeline: view(), view();
+  animation-range: 0% 70%, 50% 90%;
+}
+
+@keyframes pro2animate2{
+
+  from{
+    opacity: 0;
+  }
+  to{
+    opacity:1;
+  }
+}
+
+ @keyframes pro2animate{
+  from{
+      opacity:1;
+       
+  }
+  to{
+    transform:translate(-800px,300px);
+    opacity :0;
+  }
+} 
+#p3{
+  animation: pro3animate linear;
+  animation-timeline: view();
+  animation-range: 0% 95%;
+}
+
+@keyframes pro3animate{
+  from{
+    opacity:0;
+  }
+  to{
+    opacity:1;
+  }
+}
