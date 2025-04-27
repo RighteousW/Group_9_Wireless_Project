@@ -1,19 +1,19 @@
-.lace-up{
-margin: 0;
-  background: #111;
+.lace-up {
+  margin: 0;
+  background: #222121;
   display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
+  flex-direction: row; 
+  justify-content: center;
   align-items: center;
   height: 100vh;
   font-family: Arial, sans-serif;
   position: relative;
+  gap: 2rem; 
 }
-
 
 .lace-up-button {
     
-    padding: 15px 40px;
+    padding: 10px 10px;
     font-size: 18px;
     font-weight: bold;
     color: white;
@@ -40,6 +40,7 @@ margin: 0;
   }
   
   .lace-container {
+    margin-top: 100px;
     position: relative;
     width: 600px;
     height: 600px;
@@ -89,4 +90,25 @@ margin: 0;
     to {
       stroke-dashoffset: 0;
     }
+  }
+  .controls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    max-width: 300px;
+  }
+  
+  .catchphrases {
+    margin-top: 2rem;
+  }
+  
+  .catchphrases p {
+    margin: 10px 0;
+    padding: 10px;
+    font-size: 2rem;
+    font-weight: bold;
+    font-style: italic;
   }
