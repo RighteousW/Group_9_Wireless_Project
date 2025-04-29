@@ -9,23 +9,25 @@
   <link rel="stylesheet" href="lacestyle.css" />
   <link rel="stylesheet" href="fade_in.css">
   <link rel="stylesheet" href="paralax.css">
+  <link rel="stylesheet" href="dropdown.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
   <script type="module" src="sneaker_model_color_picker.js"></script>
   <script type="module" src="fade_in.js"></script>
   <script type="module" src="slider.js"></script>
+  <script type="module" src="dropdown.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700&display=swap" rel="stylesheet">
 
 </head>
 
 <body>
   <header>
-      <h1>Warrior Kicks</h1>
-      <nav>
-        <a href="#">Home</a>
-        <a href="#">Customize</a>
-        <a href="#">Shop</a>
-      </nav>
+    <h1>Warrior Kicks</h1>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Customize</a>
+      <a href="#">Shop</a>
+    </nav>
   </header>
 
   <div class="hero-3d">
@@ -36,7 +38,7 @@
         <button class="action-button">Customize</button>
       </div>
     </div>
-    
+
     <!-- 3D Shoe Container -->
     <div class="shoe-3d-container">
       <div class="shoe-3d">
@@ -50,81 +52,86 @@
       </div>
     </div>
   </div>
- <!-- Animated Sneaker Feature Section -->
-<section class="sneaker-feature-section">
-  <div class="feature-container">
-    <div class="feature-text">
-      <h2 class="feature-headline animate-text">Unleash Your Inner Warrior with Every Step</h2>
-      <p class="feature-description animate-text">The Warrior Sneaker is engineered for those who walk with purpose. Designed with advanced cushioning, premium materials, and bold style, this sneaker transforms your everyday stride into a statement of strength and resilience.</p>
-      
-      <ul class="benefit-list">
-        <li class="benefit-item animate-item">
-          <span class="benefit-icon">➤</span>
-          <span class="benefit-text">High-performance sole for superior grip and comfort</span>
-        </li>
-        <li class="benefit-item animate-item">
-          <span class="benefit-icon">➤</span>
-          <span class="benefit-text">Breathable mesh upper to keep your feet cool</span>
-        </li>
-        <li class="benefit-item animate-item">
-          <span class="benefit-icon">➤</span>
-          <span class="benefit-text">Modern aesthetic that turns heads</span>
-        </li>
-        <li class="benefit-item animate-item">
-          <span class="benefit-icon">➤</span>
-          <span class="benefit-text">Built for both city streets and off-road paths</span>
-        </li>
-      </ul>
-    </div>
-    
-    <div class="feature-visual">
-      <div class="sneaker-3d-card">
-        <img src="Images/4d5104186836739.Y3JvcCw4MDgsNjMyLDAsMA.png" alt="Warrior Sneaker" class="feature-sneaker">
-        <div class="sneaker-glow"></div>
+  <!-- Animated Sneaker Feature Section -->
+  <section class="sneaker-feature-section">
+    <div class="feature-container">
+      <div class="feature-text">
+        <h2 class="feature-headline animate-text">Unleash Your Inner Warrior with Every Step</h2>
+        <p class="feature-description animate-text">The Warrior Sneaker is engineered for those who walk with purpose.
+          Designed with advanced cushioning, premium materials, and bold style, this sneaker transforms your everyday
+          stride into a statement of strength and resilience.</p>
+
+        <ul class="benefit-list">
+          <li class="benefit-item animate-item">
+            <span class="benefit-icon">➤</span>
+            <span class="benefit-text">High-performance sole for superior grip and comfort</span>
+          </li>
+          <li class="benefit-item animate-item">
+            <span class="benefit-icon">➤</span>
+            <span class="benefit-text">Breathable mesh upper to keep your feet cool</span>
+          </li>
+          <li class="benefit-item animate-item">
+            <span class="benefit-icon">➤</span>
+            <span class="benefit-text">Modern aesthetic that turns heads</span>
+          </li>
+          <li class="benefit-item animate-item">
+            <span class="benefit-icon">➤</span>
+            <span class="benefit-text">Built for both city streets and off-road paths</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="feature-visual">
+        <div class="sneaker-3d-card">
+          <img src="Images/4d5104186836739.Y3JvcCw4MDgsNjMyLDAsMA.png" alt="Warrior Sneaker" class="feature-sneaker">
+          <div class="sneaker-glow"></div>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
   <!-- New section added here -->
   <section class="sneaker-features-section">
 
-    <h1 class="sneaker-features-headline">Warrior Sneaker <span class="accent">Pro</span> - dominate the streets in ultimate comfort</h1>
+    <h1 class="sneaker-features-headline">Warrior Sneaker <span class="accent">Pro</span> - dominate the streets in
+      ultimate comfort</h1>
     <div class="pro1">
       <img id="p1" src="Images/gallery/pro1.png" alt="shoes">
-    <p  id="pro1"  class="sneaker-features-subhead">Engineered for champions who refuse to settle.</p>
+      <p id="pro1" class="sneaker-features-subhead">Engineered for champions who refuse to settle.</p>
     </div>
 
     <div class="pro2">
-      <p id="pro2" class="sneaker-features-subhead">The Warrior Sneaker Pro combines cutting-edge technology with bold street style</p>
+      <p id="pro2" class="sneaker-features-subhead">The Warrior Sneaker Pro combines cutting-edge technology with bold
+        street style</p>
       <img id="p2" src="Images/gallery/pro2.png" alt="">
     </div>
-    
+
     <div class="pro3">
       <img id="p3" src="Images/gallery/pro3.png" alt="">
-      <p  id="pro3" class="sneaker-features-subhead"> Power through your toughest challenges.</p>
+      <p id="pro3" class="sneaker-features-subhead"> Power through your toughest challenges.</p>
     </div>
-      
+
     <ul class="sneaker-features-list">
       <li class="sneaker-feature-item" data-checked="false">Showcase your style with premium materials</li>
       <li class="sneaker-feature-item" data-checked="true">Available now in limited edition colors</li>
       <li class="sneaker-feature-item" data-checked="false">Global shipping with exclusive packaging</li>
     </ul>
 
-   <div class="paracontainer"> <div class="parallax">
-      <div class="pictures-para">
-        <img src="Images/gallery/backlaver1.jpg" class="backlayer">
-        <img src="Images/gallery/layer3shoes.png" class="layer3">
-        <img src="Images/gallery/layer4shoes.png" class="layer4">
-        <!-- <img src="Images/gallery/layer5shoes.png" class="layer5"> -->
+    <div class="paracontainer">
+      <div class="parallax">
+        <div class="pictures-para">
+          <img src="Images/gallery/backlaver1.jpg" class="backlayer">
+          <img src="Images/gallery/layer3shoes.png" class="layer3">
+          <img src="Images/gallery/layer4shoes.png" class="layer4">
+          <!-- <img src="Images/gallery/layer5shoes.png" class="layer5"> -->
+        </div>
+        <h1 class="para-title">Warrior Kicks</h1>
       </div>
-      <h1 class="para-title">Warrior Kicks</h1>
-     </div>
     </div>
     <script>
       window.addEventListener('scroll', () => {
         const scrollTop = window.pageYOffset;
-        
+
         // Smoother and more visible earlier movement
         document.querySelector('.backlayer').style.transform = `translateY(${scrollTop * 0.001}px)`;
         document.querySelector('.layer3').style.transform = `translateY(${scrollTop * 0.05}px)`;
@@ -132,8 +139,8 @@
         // document.querySelector('.layer5').style.transform = `translateY(${scrollTop * 0.3}px)`;
         document.querySelector('.para-title').style.transform = `translate(-50%, calc(-50% + ${scrollTop * 0.001}px))`;
       });
-    </script>    
-    
+    </script>
+
   </section>
 
   <!-- Testimonials Section -->
@@ -187,29 +194,28 @@
         <p>Secure the Win. Lace by Lace.</p>
       </div>
     </div>
-    
+
     <div class="lace-container">
       <img src="Images/gallery/sneaker.PNG" alt="sneaker">
       <svg viewBox="0 0 800 600">
         <!-- Eyelets on left -->
-        <circle class="eyelet" cx="195" cy="150" r="6"/>
-        <circle class="eyelet" cx="200" cy="200" r="6"/>
-        <circle class="eyelet" cx="200" cy="250" r="6"/>
-        <circle class="eyelet" cx="200" cy="300" r="6"/>
-        <circle class="eyelet" cx="200" cy="350" r="6"/>
-        <circle class="eyelet" cx="200" cy="400" r="6"/>
-  
+        <circle class="eyelet" cx="195" cy="150" r="6" />
+        <circle class="eyelet" cx="200" cy="200" r="6" />
+        <circle class="eyelet" cx="200" cy="250" r="6" />
+        <circle class="eyelet" cx="200" cy="300" r="6" />
+        <circle class="eyelet" cx="200" cy="350" r="6" />
+        <circle class="eyelet" cx="200" cy="400" r="6" />
+
         <!-- Eyelets on right -->
-        <circle class="eyelet" cx="345" cy="150" r="6"/>
-        <circle class="eyelet" cx="350" cy="200" r="6"/>
-        <circle class="eyelet" cx="345" cy="250" r="6"/>
-        <circle class="eyelet" cx="340" cy="300" r="6"/>
-        <circle class="eyelet" cx="340" cy="350" r="6"/>
-        <circle class="eyelet" cx="340" cy="400" r="6"/>
-  
+        <circle class="eyelet" cx="345" cy="150" r="6" />
+        <circle class="eyelet" cx="350" cy="200" r="6" />
+        <circle class="eyelet" cx="345" cy="250" r="6" />
+        <circle class="eyelet" cx="340" cy="300" r="6" />
+        <circle class="eyelet" cx="340" cy="350" r="6" />
+        <circle class="eyelet" cx="340" cy="400" r="6" />
+
         <!-- Lace Path -->
-        <path class="lace-path" id="lacePath"
-          d="M195 150 
+        <path class="lace-path" id="lacePath" d="M195 150 
              L350 200 
              L200 250 
              L345 300 
@@ -221,12 +227,11 @@
              L350 250 
              L200 300 
              L350 350
-             L200 400"
-        />
+             L200 400" />
       </svg>
     </div>
     <script>
-      document.getElementById("laceUpBtn").addEventListener("click", function() {
+      document.getElementById("laceUpBtn").addEventListener("click", function () {
         document.getElementById("lacePath").classList.add("animate");
       });
     </script>
@@ -243,7 +248,7 @@
         <div class="item"><img src="Images/gallery/img6.webp" alt="Image 6"></div>
         <div class="item"><img src="Images/gallery/img7.webp" alt="Image 7"></div>
         <div class="item"><img src="Images/gallery/img8.webp" alt="Image 8"></div>
-  
+
         <!-- Duplicate list for seamless scroll -->
         <div class="item"><img src="Images/gallery/img2.webp" alt="Image 2"></div>
         <div class="item"><img src="Images/gallery/img3.webp" alt="Image 3"></div>
@@ -261,18 +266,21 @@
 
     <div class="model-body">
       <model-viewer id="warriorModel" src="Images/warrior_sneaker_with_sole.glb" alt="3D Warrior Sneaker" auto-rotate
-        camera-controls ar shadow-intensity="1" 
-        loading="eager">
+        camera-controls ar shadow-intensity="1" loading="eager">
       </model-viewer>
 
       <div class="model-sidebar">
-        <div class="model-material-select">
-          <select id="materialSelect">
-            <option value="Purpleshoe">Upper shoe</option>
-            <option value="LacesFlatMaterial">Laces</option>
-            <option value="Sole">Sole</option>
-          </select>
+        <!-- Custom Dropdown -->
+        <div class="dropdown-container">
+          <div id="selectedOption" class="selected-option" data-value="Purpleshoe">Upper shoe</div>
+          <ul id="dropdownOptions" class="dropdown-options">
+            <li data-value="Purpleshoe">Upper shoe</li>
+            <li data-value="LacesFlatMaterial">Laces</li>
+            <li data-value="Sole">Sole</li>
+          </ul>
         </div>
+      
+        <!-- Color Picker -->
         <div class="color-picker-container">
           <canvas id="color-wheel" width="200" height="200"></canvas>
           <div id="output"></div>
@@ -281,209 +289,232 @@
     </div>
   </section>
 
-  
-
-
-  <section class="warrior-cta-section" style="padding: 4rem 2rem; background-color: #fefefe; text-align: center; border-top: 1px solid #eaeaea;">
+  <section class="warrior-cta-section"
+    style="padding: 4rem 2rem; background-color: #fefefe; text-align: center; border-top: 1px solid #eaeaea;">
     <style>
-   .hero-3d {
-    position: relative;
-    height: 100vh;
-    overflow: hidden;
-    background: linear-gradient(135deg, white, white 100%);
-    display: flex;
-    align-items: center;
-  }
-
-  .hero-content {
-    position: relative;
-    z-index: 10;
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 5%;
-  }
-
-  .hero-text {
-    max-width: 600px;
-  }
-
-  .headline {
-    font-size: 5rem;
-    font-weight: 900;
-    color: black;
-    line-height: 1;
-    margin-bottom: 1rem;
-    text-transform: uppercase;
-  }
-
-  .highlight {
-    color: black;
-  }
-
-  .subheadline {
-    font-size: 1.8rem;
-    font-weight: 300;
-    color: black;
-    margin-bottom: 2.5rem;
-  }
-
-  .action-button {
-    background: black;
-    color: white;
-    border: none;
-    padding: 1.2rem 3rem;
-    font-size: 1.1rem;
-    font-weight: 600;
-    border-radius: 50px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    box-shadow: 0 10px 30px black;
-  }
-
-  .action-button:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 40px black;
-  }
-
-  /* 3D Shoe Elements */
-  .shoe-3d-container {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 60%;
-    height: 100%;
-    z-index: 1;
-  }
-
-  .shoe-3d {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100%;
-    height: 100%;
-    perspective: 1000px;
-  }
-
-  .shoe-main {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) rotateY(20deg);
-    height: 80vh;
-    object-fit: contain;
-    filter: drop-shadow(0 20px 30px rgba(0,0,0,0.5));
-    animation: float 6s ease-in-out infinite;
-    will-change: transform;
-  }
-
-  .shoe-shadow {
-    position: absolute;
-    bottom: 10%;
-    left: 50%;
-    transform: translateX(-50%) rotateX(80deg) scale(1.2);
-    width: 60%;
-    opacity: 0.3;
-    filter: blur(10px);
-  }
-
-  /* Particles for depth effect */
-  .particles {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-  }
-
-  .particle {
-    position: absolute;
-    background: rgba(255,255,255,0.1);
-    border-radius: 50%;
-    animation: particle-move linear infinite;
-  }
-
-  /* Create 3 particles at different positions */
-  .particle:nth-child(1) {
-    width: 8px;
-    height: 8px;
-    top: 20%;
-    left: 30%;
-    animation-duration: 15s;
-  }
-
-  .particle:nth-child(2) {
-    width: 5px;
-    height: 5px;
-    top: 60%;
-    left: 70%;
-    animation-duration: 20s;
-  }
-
-  .particle:nth-child(3) {
-    width: 3px;
-    height: 3px;
-    top: 40%;
-    left: 50%;
-    animation-duration: 25s;
-  }
-
-  /* Animations */
-  @keyframes float {
-    0%, 100% { transform: translate(-50%, -50%) rotateY(20deg) translateY(0); }
-    50% { transform: translate(-50%, -50%) rotateY(20deg) translateY(-20px); }
-  }
-
-  @keyframes particle-move {
-    0% { transform: translateY(0) translateX(0); }
-    100% { transform: translateY(-100vh) translateX(100px); }
-  }
-
-  /* Parallax Effect on Scroll */
-  .shoe-main {
-    transition: transform 0.1s ease-out;
-  }
-
-  /* Responsive Design */
-  @media (max-width: 1024px) {
-    .shoe-3d-container {
-      width: 100%;
-      opacity: 0.3;
-    }
-    
-    .hero-text {
-      max-width: 100%;
-      text-align: center;
-    }
-    
-    .headline {
-      font-size: 3.5rem;
-    }
-  }
-    /* Hover animation for the action button */
-    .action-button {
-      transition: transform 0.3s ease-in-out, background-color 0.3s ease;
-    }
-
-    .action-button:hover {
-      transform: scale(1.1);
-      background-color: #555; /* Change to a darker color on hover */
-    }
-      @keyframes bounce {
-        0%, 100% { transform: translateY(0); }
-        50% { transform: translateY(-15px); }
+      .hero-3d {
+        position: relative;
+        height: 100vh;
+        overflow: hidden;
+        background: linear-gradient(135deg, white, white 100%);
+        display: flex;
+        align-items: center;
       }
-  
+
+      .hero-content {
+        position: relative;
+        z-index: 10;
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 5%;
+      }
+
+      .hero-text {
+        max-width: 600px;
+      }
+
+      .headline {
+        font-size: 5rem;
+        font-weight: 900;
+        color: black;
+        line-height: 1;
+        margin-bottom: 1rem;
+        text-transform: uppercase;
+      }
+
+      .highlight {
+        color: black;
+      }
+
+      .subheadline {
+        font-size: 1.8rem;
+        font-weight: 300;
+        color: black;
+        margin-bottom: 2.5rem;
+      }
+
+      .action-button {
+        background: black;
+        color: white;
+        border: none;
+        padding: 1.2rem 3rem;
+        font-size: 1.1rem;
+        font-weight: 600;
+        border-radius: 50px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        box-shadow: 0 10px 30px black;
+      }
+
+      .action-button:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 40px black;
+      }
+
+      /* 3D Shoe Elements */
+      .shoe-3d-container {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 60%;
+        height: 100%;
+        z-index: 1;
+      }
+
+      .shoe-3d {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        height: 100%;
+        perspective: 1000px;
+      }
+
+      .shoe-main {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotateY(20deg);
+        height: 80vh;
+        object-fit: contain;
+        filter: drop-shadow(0 20px 30px rgba(0, 0, 0, 0.5));
+        animation: float 6s ease-in-out infinite;
+        will-change: transform;
+      }
+
+      .shoe-shadow {
+        position: absolute;
+        bottom: 10%;
+        left: 50%;
+        transform: translateX(-50%) rotateX(80deg) scale(1.2);
+        width: 60%;
+        opacity: 0.3;
+        filter: blur(10px);
+      }
+
+      /* Particles for depth effect */
+      .particles {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+
+      .particle {
+        position: absolute;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 50%;
+        animation: particle-move linear infinite;
+      }
+
+      /* Create 3 particles at different positions */
+      .particle:nth-child(1) {
+        width: 8px;
+        height: 8px;
+        top: 20%;
+        left: 30%;
+        animation-duration: 15s;
+      }
+
+      .particle:nth-child(2) {
+        width: 5px;
+        height: 5px;
+        top: 60%;
+        left: 70%;
+        animation-duration: 20s;
+      }
+
+      .particle:nth-child(3) {
+        width: 3px;
+        height: 3px;
+        top: 40%;
+        left: 50%;
+        animation-duration: 25s;
+      }
+
+      /* Animations */
+      @keyframes float {
+
+        0%,
+        100% {
+          transform: translate(-50%, -50%) rotateY(20deg) translateY(0);
+        }
+
+        50% {
+          transform: translate(-50%, -50%) rotateY(20deg) translateY(-20px);
+        }
+      }
+
+      @keyframes particle-move {
+        0% {
+          transform: translateY(0) translateX(0);
+        }
+
+        100% {
+          transform: translateY(-100vh) translateX(100px);
+        }
+      }
+
+      /* Parallax Effect on Scroll */
+      .shoe-main {
+        transition: transform 0.1s ease-out;
+      }
+
+      /* Responsive Design */
+      @media (max-width: 1024px) {
+        .shoe-3d-container {
+          width: 100%;
+          opacity: 0.3;
+        }
+
+        .hero-text {
+          max-width: 100%;
+          text-align: center;
+        }
+
+        .headline {
+          font-size: 3.5rem;
+        }
+      }
+
+      /* Hover animation for the action button */
+      .action-button {
+        transition: transform 0.3s ease-in-out, background-color 0.3s ease;
+      }
+
+      .action-button:hover {
+        transform: scale(1.1);
+        background-color: #555;
+        /* Change to a darker color on hover */
+      }
+
+      @keyframes bounce {
+
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+
+        50% {
+          transform: translateY(-15px);
+        }
+      }
+
       @keyframes glowPulse {
-        0%, 100% {
+
+        0%,
+        100% {
           box-shadow: 0 0 12px #66ffcc, 0 0 24px #66ffcc;
         }
+
         50% {
           box-shadow: 0 0 24px #00ff99, 0 0 48px #00ff99;
         }
       }
-  
+
       .bouncing-heading {
         font-size: 2.5rem;
         color: #2b4c38;
@@ -492,26 +523,26 @@
         font-weight: bold;
         letter-spacing: 2px;
       }
-  
+
       .glow-button:hover {
         animation: glowPulse 1.8s infinite;
       }
-  
+
       .glowing-box {
         animation: glowPulse 2s infinite;
       }
-  
+
       .fade-in {
         opacity: 0;
         transform: translateY(30px);
         transition: all 0.8s ease-in-out;
       }
-  
+
       .fade-in.visible {
         opacity: 1;
         transform: translateY(0);
       }
-  
+
       /* Popup styling */
       .popup {
         position: fixed;
@@ -520,28 +551,28 @@
         width: 100%;
         height: 100%;
         display: none;
-        background: rgba(0,0,0,0.5);
+        background: rgba(0, 0, 0, 0.5);
         align-items: center;
         justify-content: center;
         z-index: 9999;
       }
-  
+
       .popup-content {
         background: white;
         padding: 2rem;
         border-radius: 10px;
         max-width: 400px;
         width: 90%;
-        box-shadow: 0 0 20px rgba(0,0,0,0.2);
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
         text-align: left;
       }
-  
+
       .popup-content h3 {
         margin-top: 0;
         font-size: 1.3rem;
         color: #2b4c38;
       }
-  
+
       .popup-content input,
       .popup-content button {
         width: 100%;
@@ -550,217 +581,248 @@
         border-radius: 8px;
         font-size: 1rem;
       }
-  
+
       .popup-content input {
         border: 1px solid #ccc;
       }
-  
+
       .popup-content button {
         background-color: #2b4c38;
         color: white;
         border: none;
         cursor: pointer;
       }
-  
+
       .popup-content .close-btn {
         background: #ddd;
         color: #333;
       }
 
-    /* Section Styling - Won't Affect Hero */
-  .sneaker-feature-section {
-    padding: 8rem 5%;
-    background: linear-gradient(to right, #fafafa 40%, #ffffff 100%);
-    position: relative;
-    z-index: 5; /* Below hero section */
-  }
+      /* Section Styling - Won't Affect Hero */
+      .sneaker-feature-section {
+        padding: 8rem 5%;
+        background: linear-gradient(to right, #fafafa 40%, #ffffff 100%);
+        position: relative;
+        z-index: 5;
+        /* Below hero section */
+      }
 
-  .feature-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    gap: 60px;
-  }
+      .feature-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        gap: 60px;
+      }
 
-  .feature-text {
-    flex: 1;
-    padding-right: 40px;
-  }
+      .feature-text {
+        flex: 1;
+        padding-right: 40px;
+      }
 
-  .feature-visual {
-    flex: 1;
-    position: relative;
-  }
+      .feature-visual {
+        flex: 1;
+        position: relative;
+      }
 
-  /* Text Animation Styles */
-  .feature-headline {
-    font-size: 2.8rem;
-    font-weight: 800;
-    line-height: 1.2;
-    color: #222;
-    margin-bottom: 1.5rem;
-    opacity: 0;
-    transform: translateY(20px);
-    transition: all 0.8s cubic-bezier(0.215, 0.61, 0.355, 1);
-  }
+      /* Text Animation Styles */
+      .feature-headline {
+        font-size: 2.8rem;
+        font-weight: 800;
+        line-height: 1.2;
+        color: #222;
+        margin-bottom: 1.5rem;
+        opacity: 0;
+        transform: translateY(20px);
+        transition: all 0.8s cubic-bezier(0.215, 0.61, 0.355, 1);
+      }
 
-  .feature-description {
-    font-size: 1.1rem;
-    line-height: 1.8;
-    color: #555;
-    margin-bottom: 2.5rem;
-    opacity: 0;
-    transform: translateY(20px);
-    transition: all 0.8s cubic-bezier(0.215, 0.61, 0.355, 1) 0.2s;
-  }
+      .feature-description {
+        font-size: 1.1rem;
+        line-height: 1.8;
+        color: #555;
+        margin-bottom: 2.5rem;
+        opacity: 0;
+        transform: translateY(20px);
+        transition: all 0.8s cubic-bezier(0.215, 0.61, 0.355, 1) 0.2s;
+      }
 
-  /* Benefit List Styles */
-  .benefit-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
+      /* Benefit List Styles */
+      .benefit-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
 
-  .benefit-item {
-    margin-bottom: 1.2rem;
-    display: flex;
-    align-items: flex-start;
-    opacity: 0;
-    transform: translateX(-20px);
-    transition: all 0.6s ease-out;
-  }
+      .benefit-item {
+        margin-bottom: 1.2rem;
+        display: flex;
+        align-items: flex-start;
+        opacity: 0;
+        transform: translateX(-20px);
+        transition: all 0.6s ease-out;
+      }
 
-  .benefit-item:nth-child(1) { transition-delay: 0.4s; }
-  .benefit-item:nth-child(2) { transition-delay: 0.5s; }
-  .benefit-item:nth-child(3) { transition-delay: 0.6s; }
-  .benefit-item:nth-child(4) { transition-delay: 0.7s; }
+      .benefit-item:nth-child(1) {
+        transition-delay: 0.4s;
+      }
 
-  .benefit-icon {
-    color: #ff5252;
-    font-size: 1.2rem;
-    margin-right: 15px;
-    line-height: 1.4;
-  }
+      .benefit-item:nth-child(2) {
+        transition-delay: 0.5s;
+      }
 
-  .benefit-text {
-    font-size: 1.05rem;
-    line-height: 1.6;
-    color: #444;
-  }
+      .benefit-item:nth-child(3) {
+        transition-delay: 0.6s;
+      }
 
-  /* Sneaker Visual Styles */
-  .sneaker-3d-card {
-    position: relative;
-    perspective: 1000px;
-  }
+      .benefit-item:nth-child(4) {
+        transition-delay: 0.7s;
+      }
 
-  .feature-sneaker {
-    width: 100%;
-    max-width: 500px;
-    transform: rotate(-10deg);
-    filter: drop-shadow(0 15px 30px rgba(0,0,0,0.1));
-    transition: transform 0.5s ease-out;
-    position: relative;
-    z-index: 2;
-  }
+      .benefit-icon {
+        color: #ff5252;
+        font-size: 1.2rem;
+        margin-right: 15px;
+        line-height: 1.4;
+      }
 
-  .sneaker-glow {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 80%;
-    height: 80%;
-    background: radial-gradient(circle, rgba(255,82,82,0.15) 0%, rgba(255,82,82,0) 70%);
-    transform: translate(-50%, -50%);
-    z-index: 1;
-    border-radius: 50%;
-    animation: pulse 4s ease-in-out infinite;
-  }
+      .benefit-text {
+        font-size: 1.05rem;
+        line-height: 1.6;
+        color: #444;
+      }
 
-  /* Animations */
-  @keyframes pulse {
-    0%, 100% { opacity: 0.8; transform: translate(-50%, -50%) scale(1); }
-    50% { opacity: 0.4; transform: translate(-50%, -50%) scale(1.1); }
-  }
+      /* Sneaker Visual Styles */
+      .sneaker-3d-card {
+        position: relative;
+        perspective: 1000px;
+      }
 
-  /* Active Animation State */
-  .animate-text {
-    opacity: 1 !important;
-    transform: translateY(0) !important;
-  }
+      .feature-sneaker {
+        width: 100%;
+        max-width: 500px;
+        transform: rotate(-10deg);
+        filter: drop-shadow(0 15px 30px rgba(0, 0, 0, 0.1));
+        transition: transform 0.5s ease-out;
+        position: relative;
+        z-index: 2;
+      }
 
-  .animate-item {
-    opacity: 1 !important;
-    transform: translateX(0) !important;
-  }
+      .sneaker-glow {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 80%;
+        height: 80%;
+        background: radial-gradient(circle, rgba(255, 82, 82, 0.15) 0%, rgba(255, 82, 82, 0) 70%);
+        transform: translate(-50%, -50%);
+        z-index: 1;
+        border-radius: 50%;
+        animation: pulse 4s ease-in-out infinite;
+      }
 
-  /* Hover Effects */
-  .sneaker-3d-card:hover .feature-sneaker {
-    transform: rotate(-8deg) translateY(-10px);
-  }
+      /* Animations */
+      @keyframes pulse {
 
-  .benefit-item:hover .benefit-icon {
-    animation: bounce 0.5s;
-  }
+        0%,
+        100% {
+          opacity: 0.8;
+          transform: translate(-50%, -50%) scale(1);
+        }
 
-  @keyframes bounce {
-    0%, 100% { transform: translateX(0); }
-    50% { transform: translateX(5px); }
-  }
+        50% {
+          opacity: 0.4;
+          transform: translate(-50%, -50%) scale(1.1);
+        }
+      }
 
-  /* Responsive Design */
-  @media (max-width: 992px) {
-    .feature-container {
-      flex-direction: column;
-      gap: 40px;
-    }
-    
-    .feature-text {
-      padding-right: 0;
-      text-align: center;
-    }
-    
-    .benefit-item {
-      justify-content: center;
-    }
-    
-    .feature-sneaker {
-      max-width: 400px;
-    }
-  }
+      /* Active Animation State */
+      .animate-text {
+        opacity: 1 !important;
+        transform: translateY(0) !important;
+      }
 
-  @media (max-width: 768px) {
-    .sneaker-feature-section {
-      padding: 5rem 5%;
-    }
-    
-    .feature-headline {
-      font-size: 2.2rem;
-    }
-  }
+      .animate-item {
+        opacity: 1 !important;
+        transform: translateX(0) !important;
+      }
+
+      /* Hover Effects */
+      .sneaker-3d-card:hover .feature-sneaker {
+        transform: rotate(-8deg) translateY(-10px);
+      }
+
+      .benefit-item:hover .benefit-icon {
+        animation: bounce 0.5s;
+      }
+
+      @keyframes bounce {
+
+        0%,
+        100% {
+          transform: translateX(0);
+        }
+
+        50% {
+          transform: translateX(5px);
+        }
+      }
+
+      /* Responsive Design */
+      @media (max-width: 992px) {
+        .feature-container {
+          flex-direction: column;
+          gap: 40px;
+        }
+
+        .feature-text {
+          padding-right: 0;
+          text-align: center;
+        }
+
+        .benefit-item {
+          justify-content: center;
+        }
+
+        .feature-sneaker {
+          max-width: 400px;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .sneaker-feature-section {
+          padding: 5rem 5%;
+        }
+
+        .feature-headline {
+          font-size: 2.2rem;
+        }
+      }
     </style>
-  
+
     <div style="max-width: 800px; margin: 0 auto;">
       <h2 class="bouncing-heading">ELEVATE YOUR GAME</h2>
-  
+
       <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 1.5rem; margin: 2rem 0;">
-        <div class="fade-in glowing-box" style="flex: 1; min-width: 250px; padding: 1.5rem; background: #f4f8f5; border-radius: 8px; box-shadow: 0 2px 12px rgba(0,0,0,0.08);">
+        <div class="fade-in glowing-box"
+          style="flex: 1; min-width: 250px; padding: 1.5rem; background: #f4f8f5; border-radius: 8px; box-shadow: 0 2px 12px rgba(0,0,0,0.08);">
           <h3 style="margin: 0 0 1rem 0; font-size: 1.1rem; color: #2a2a2a;">BATTLE-PROVEN</h3>
           <p style="margin: 0; color: #444; font-size: 0.95rem;">Tested by athletes on all surfaces</p>
         </div>
-  
-        <div class="fade-in glowing-box" style="flex: 1; min-width: 250px; padding: 1.5rem; background: #f4f8f5; border-radius: 8px; box-shadow: 0 2px 12px rgba(0,0,0,0.08);">
+
+        <div class="fade-in glowing-box"
+          style="flex: 1; min-width: 250px; padding: 1.5rem; background: #f4f8f5; border-radius: 8px; box-shadow: 0 2px 12px rgba(0,0,0,0.08);">
           <h3 style="margin: 0 0 1rem 0; font-size: 1.1rem; color: #2a2a2a;">COMMUNITY APPROVED</h3>
           <p style="margin: 0; color: #444; font-size: 0.95rem;">5,000+ warriors can't be wrong</p>
         </div>
       </div>
-  
-      <button class="action-button glow-button fade-in" onclick="document.getElementById('popup').style.display='flex'" style="margin-top: 1.5rem; padding: 12px 30px; background: #2b4c38; color: white; border: none; border-radius: 25px; font-weight: 600; text-decoration: none; display: inline-block;">
+
+      <button class="action-button glow-button fade-in" onclick="document.getElementById('popup').style.display='flex'"
+        style="margin-top: 1.5rem; padding: 12px 30px; background: #2b4c38; color: white; border: none; border-radius: 25px; font-weight: 600; text-decoration: none; display: inline-block;">
         JOIN THE MOVEMENT →
       </button>
     </div>
-  
+
     <!-- Registration Popup -->
     <div class="popup" id="popup">
       <div class="popup-content">
@@ -772,14 +834,14 @@
         <button class="close-btn" onclick="document.getElementById('popup').style.display='none'">Close</button>
       </div>
     </div>
-  
+
     <script>
       const faders = document.querySelectorAll('.fade-in');
       const appearOptions = {
         threshold: 0.3,
         rootMargin: '0px 0px -50px 0px'
       };
-  
+
       const appearOnScroll = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
           if (!entry.isIntersecting) return;
@@ -787,17 +849,17 @@
           observer.unobserve(entry.target);
         });
       }, appearOptions);
-  
+
       faders.forEach(fader => {
         appearOnScroll.observe(fader);
       });
-  
+
       // Registration form functionality
       function registerUser() {
         const name = document.getElementById('fullName').value;
         const email = document.getElementById('email').value;
         const password = document.getElementById('password').value;
-  
+
         if (name && email && password) {
           alert('Registration Successful! Welcome ' + name);
           // Here you would normally send the data to the backend (e.g., with an AJAX request).
@@ -807,68 +869,68 @@
         }
       }
       // Parallax effect on mouse move
-  document.addEventListener('mousemove', (e) => {
-    const shoe = document.querySelector('.shoe-main');
-    const xAxis = (window.innerWidth / 2 - e.pageX) / 25;
-    const yAxis = (window.innerHeight / 2 - e.pageY) / 25;
-    shoe.style.transform = `translate(-50%, -50%) rotateY(${20 + xAxis}deg) rotateX(${yAxis}deg)`;
-  });
-
-  // Enhanced scroll parallax
-  window.addEventListener('scroll', () => {
-    const scrollPosition = window.scrollY;
-    const shoe = document.querySelector('.shoe-main');
-    shoe.style.transform = `translate(-50%, calc(-50% + ${scrollPosition * 0.2}px)) rotateY(20deg)`;
-  });
-
-   // Intersection Observer for scroll-triggered animations
-   document.addEventListener('DOMContentLoaded', () => {
-    const section = document.querySelector('.warrior-sneaker-section');
-    
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('animate');
-        }
-      });
-    }, { threshold: 0.1 });
-    
-    observer.observe(section);
-  });
-  // Intersection Observer for scroll-triggered animations
-  document.addEventListener('DOMContentLoaded', function() {
-    const section = document.querySelector('.sneaker-feature-section');
-    const elements = document.querySelectorAll('.animate-text, .animate-item');
-    
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          elements.forEach(el => {
-            el.classList.add('animate-text', 'animate-item');
-          });
-          observer.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.1 });
-    
-    if (section) {
-      observer.observe(section);
-    }
-
-    // 3D tilt effect for sneaker
-    const sneakerCard = document.querySelector('.sneaker-3d-card');
-    if (sneakerCard) {
-      sneakerCard.addEventListener('mousemove', (e) => {
+      document.addEventListener('mousemove', (e) => {
+        const shoe = document.querySelector('.shoe-main');
         const xAxis = (window.innerWidth / 2 - e.pageX) / 25;
         const yAxis = (window.innerHeight / 2 - e.pageY) / 25;
-        sneakerCard.style.transform = `rotateY(${xAxis}deg) rotateX(${yAxis}deg)`;
+        shoe.style.transform = `translate(-50%, -50%) rotateY(${20 + xAxis}deg) rotateX(${yAxis}deg)`;
       });
-      
-      sneakerCard.addEventListener('mouseleave', () => {
-        sneakerCard.style.transform = 'rotateY(0) rotateX(0)';
+
+      // Enhanced scroll parallax
+      window.addEventListener('scroll', () => {
+        const scrollPosition = window.scrollY;
+        const shoe = document.querySelector('.shoe-main');
+        shoe.style.transform = `translate(-50%, calc(-50% + ${scrollPosition * 0.2}px)) rotateY(20deg)`;
       });
-    }
-  });
+
+      // Intersection Observer for scroll-triggered animations
+      document.addEventListener('DOMContentLoaded', () => {
+        const section = document.querySelector('.warrior-sneaker-section');
+
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('animate');
+            }
+          });
+        }, { threshold: 0.1 });
+
+        observer.observe(section);
+      });
+      // Intersection Observer for scroll-triggered animations
+      document.addEventListener('DOMContentLoaded', function () {
+        const section = document.querySelector('.sneaker-feature-section');
+        const elements = document.querySelectorAll('.animate-text, .animate-item');
+
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              elements.forEach(el => {
+                el.classList.add('animate-text', 'animate-item');
+              });
+              observer.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.1 });
+
+        if (section) {
+          observer.observe(section);
+        }
+
+        // 3D tilt effect for sneaker
+        const sneakerCard = document.querySelector('.sneaker-3d-card');
+        if (sneakerCard) {
+          sneakerCard.addEventListener('mousemove', (e) => {
+            const xAxis = (window.innerWidth / 2 - e.pageX) / 25;
+            const yAxis = (window.innerHeight / 2 - e.pageY) / 25;
+            sneakerCard.style.transform = `rotateY(${xAxis}deg) rotateX(${yAxis}deg)`;
+          });
+
+          sneakerCard.addEventListener('mouseleave', () => {
+            sneakerCard.style.transform = 'rotateY(0) rotateX(0)';
+          });
+        }
+      });
     </script>
 
   </section>
@@ -879,36 +941,50 @@
         opacity: 0;
         transform: translateY(20px);
       }
+
       to {
         opacity: 1;
         transform: translateY(0);
       }
     }
-  
+
     @keyframes pulseGlow {
       0% {
         box-shadow: 0 0 5px rgba(101, 141, 124, 0.5);
       }
+
       50% {
         box-shadow: 0 0 20px rgba(101, 141, 124, 0.8);
       }
+
       100% {
         box-shadow: 0 0 5px rgba(101, 141, 124, 0.5);
       }
     }
-  
+
     @keyframes dramaticShake {
-      0%, 100% {
+
+      0%,
+      100% {
         transform: translateX(0);
       }
-      10%, 30%, 50%, 70%, 90% {
+
+      10%,
+      30%,
+      50%,
+      70%,
+      90% {
         transform: translateX(-5px);
       }
-      20%, 40%, 60%, 80% {
+
+      20%,
+      40%,
+      60%,
+      80% {
         transform: translateX(5px);
       }
     }
-  
+
     .coming-soon-section {
       background: #f5f7f6;
       padding: 4rem 2rem;
@@ -916,12 +992,12 @@
       opacity: 0;
       animation: fadeInUp 0.8s ease-out forwards;
     }
-  
+
     .coming-soon-container {
       max-width: 500px;
       margin: 0 auto;
     }
-  
+
     .subtitle {
       letter-spacing: 1px;
       margin-bottom: 0.5rem;
@@ -929,19 +1005,20 @@
       color: #6b7d7d;
       text-transform: uppercase;
     }
-  
+
     .title {
       font-size: 1.8rem;
       margin: 0 0 2rem 0;
       color: #2a3d45;
       font-weight: 500;
-      display: inline-block; /* Required for the shake animation */
+      display: inline-block;
+      /* Required for the shake animation */
     }
-  
+
     .title:hover {
       animation: dramaticShake 0.5s ease-in-out;
     }
-  
+
     .email-form {
       display: flex;
       justify-content: center;
@@ -949,7 +1026,7 @@
       margin: 0 auto;
       gap: 8px;
     }
-  
+
     .email-input {
       padding: 12px 20px;
       width: 70%;
@@ -959,13 +1036,13 @@
       background: white;
       transition: all 0.3s ease;
     }
-  
+
     .email-input:focus {
       outline: none;
       border-color: #88a096;
       box-shadow: 0 0 0 3px rgba(136, 160, 150, 0.2);
     }
-  
+
     .notify-btn {
       padding: 12px 25px;
       background: #88a096;
@@ -977,31 +1054,31 @@
       transition: all 0.3s ease;
       animation: pulseGlow 2s infinite;
     }
-  
+
     .notify-btn:hover {
       background: #4d6b5f;
       transform: translateY(-2px);
       animation: pulseGlow 1s infinite;
     }
-  
+
     .notify-btn:focus {
       outline: none;
       background: #4d6b5f;
       animation: pulseGlow 1s infinite;
     }
-  
+
     @media (max-width: 480px) {
       .email-form {
         flex-direction: column;
       }
-      
+
       .email-input,
       .notify-btn {
         width: 100%;
       }
     }
   </style>
-  
+
   <section class="coming-soon-section">
     <div class="coming-soon-container">
       <p class="subtitle">NEXT-LEVEL PERFORMANCE</p>
@@ -1014,12 +1091,12 @@
       </form>
     </div>
   </section>
-  
+
   <script>
     // Simple scroll animation trigger
-    document.addEventListener('DOMContentLoaded', function() {
+    document.addEventListener('DOMContentLoaded', function () {
       const section = document.querySelector('.coming-soon-section');
-      
+
       const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
@@ -1027,12 +1104,13 @@
           }
         });
       }, { threshold: 0.1 });
-      
+
       observer.observe(section);
     });
   </script>
 
-  <footer style="background-color: #000; color: white; text-align: center; padding: 2rem 0; position: relative; bottom: 0; width: 100%;">
+  <footer
+    style="background-color: #000; color: white; text-align: center; padding: 2rem 0; position: relative; bottom: 0; width: 100%;">
     <style>
       /* Hover effect for social media links */
       footer a {
@@ -1041,31 +1119,31 @@
         font-size: 1.2rem;
         transition: color 0.3s ease, transform 0.3s ease;
       }
-  
+
       footer a:hover {
         color: #66ffcc;
         transform: scale(1.1);
       }
-  
+
       /* Glowing footer text effect */
       footer p {
         margin: 0.5rem 0;
         font-size: 1rem;
         color: #000;
       }
-  
+
       footer p a:hover {
         text-decoration: underline;
         color: #66ffcc;
       }
-  
+
       /* Fade-in effect when footer appears on scroll */
       .footer-fade-in {
         opacity: 0;
         transform: translateY(30px);
         transition: all 1s ease-in-out;
       }
-  
+
       .footer-fade-in.visible {
         opacity: 1;
         transform: translateY(0);
@@ -1073,26 +1151,26 @@
     </style>
 
 
-<script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const faders = document.querySelectorAll('.fade-in');
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const faders = document.querySelectorAll('.fade-in');
 
-    const appearOnScroll = new IntersectionObserver((entries, observer) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          observer.unobserve(entry.target);
-        }
+        const appearOnScroll = new IntersectionObserver((entries, observer) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+              observer.unobserve(entry.target);
+            }
+          });
+        }, {
+          threshold: 0.1
+        });
+
+        faders.forEach(fadeEl => {
+          appearOnScroll.observe(fadeEl);
+        });
       });
-    }, {
-      threshold: 0.1
-    });
-
-    faders.forEach(fadeEl => {
-      appearOnScroll.observe(fadeEl);
-    });
-  });
-</script>
+    </script>
 
 
     <div class="footer-fade-in">
@@ -1103,58 +1181,58 @@
         <a href="#">YouTube</a>
       </p>
     </div>
-  
+
     <script>
-       // Detecting scroll position to trigger animations
-    window.addEventListener('scroll', function() {
-      const heroText = document.querySelector('.hero-text');
-      const warriorSection = document.querySelector('.warrior-sneaker-section');
-      const heroImage = document.querySelector('.hero-image img');
-      const sneakerImage = document.querySelector('.warrior-sneaker-section .sneaker-image img');
-      
-      // Check if the hero text is in the viewport
-      if (heroText.getBoundingClientRect().top < window.innerHeight) {
-        heroText.style.opacity = 1;
-        heroText.style.transform = 'translateY(0)';
-      }
+      // Detecting scroll position to trigger animations
+      window.addEventListener('scroll', function () {
+        const heroText = document.querySelector('.hero-text');
+        const warriorSection = document.querySelector('.warrior-sneaker-section');
+        const heroImage = document.querySelector('.hero-image img');
+        const sneakerImage = document.querySelector('.warrior-sneaker-section .sneaker-image img');
 
-      // Check if the warrior sneaker section is in the viewport
-      if (warriorSection.getBoundingClientRect().top < window.innerHeight) {
-        warriorSection.style.opacity = 1;
-        warriorSection.style.transform = 'translateY(0)';
-      }
+        // Check if the hero text is in the viewport
+        if (heroText.getBoundingClientRect().top < window.innerHeight) {
+          heroText.style.opacity = 1;
+          heroText.style.transform = 'translateY(0)';
+        }
 
-      // Check if the hero image is in the viewport
-      if (heroImage.getBoundingClientRect().top < window.innerHeight) {
-        heroImage.style.opacity = 1;
-        heroImage.style.transform = 'translateY(0)';
-      }
+        // Check if the warrior sneaker section is in the viewport
+        if (warriorSection.getBoundingClientRect().top < window.innerHeight) {
+          warriorSection.style.opacity = 1;
+          warriorSection.style.transform = 'translateY(0)';
+        }
 
-      // Check if the sneaker image is in the viewport
-      if (sneakerImage.getBoundingClientRect().top < window.innerHeight) {
-        sneakerImage.style.opacity = 1;
-        sneakerImage.style.transform = 'translateY(0)';
-      }
-    });
+        // Check if the hero image is in the viewport
+        if (heroImage.getBoundingClientRect().top < window.innerHeight) {
+          heroImage.style.opacity = 1;
+          heroImage.style.transform = 'translateY(0)';
+        }
 
-    // Hover effect on the "Shop Now" button
-    const actionButton = document.querySelector('.action-button');
-    actionButton.addEventListener('mouseover', function() {
-      // Add hover animation
-      actionButton.style.transform = 'scale(1.1)';
-      actionButton.style.backgroundColor = '#555';
-    });
+        // Check if the sneaker image is in the viewport
+        if (sneakerImage.getBoundingClientRect().top < window.innerHeight) {
+          sneakerImage.style.opacity = 1;
+          sneakerImage.style.transform = 'translateY(0)';
+        }
+      });
 
-    actionButton.addEventListener('mouseout', function() {
-      // Remove hover animation
-      actionButton.style.transform = 'scale(1)';
-      actionButton.style.backgroundColor = '';
-    });
+      // Hover effect on the "Shop Now" button
+      const actionButton = document.querySelector('.action-button');
+      actionButton.addEventListener('mouseover', function () {
+        // Add hover animation
+        actionButton.style.transform = 'scale(1.1)';
+        actionButton.style.backgroundColor = '#555';
+      });
 
-    // Click effect on the "Shop Now" button
-    actionButton.addEventListener('click', function() {
-      window.location.href = '#Model-Customizer';
-    });
+      actionButton.addEventListener('mouseout', function () {
+        // Remove hover animation
+        actionButton.style.transform = 'scale(1)';
+        actionButton.style.backgroundColor = '';
+      });
+
+      // Click effect on the "Shop Now" button
+      actionButton.addEventListener('click', function () {
+        window.location.href = '#Model-Customizer';
+      });
       // Footer fade-in effect on scroll
       const footer = document.querySelector('.footer-fade-in');
       const footerObserver = new IntersectionObserver((entries, observer) => {
@@ -1167,9 +1245,9 @@
       }, {
         threshold: 0.1,
       });
-  
+
       footerObserver.observe(footer);
     </script>
   </footer>
-  
+
 </html>
